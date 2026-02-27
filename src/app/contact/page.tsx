@@ -38,9 +38,9 @@ export default function Contact() {
                                     <div>
                                         <h3 className="text-lg font-bold text-gray-800 mb-1">Campus Address</h3>
                                         <p className="text-gray-600 leading-relaxed">
-                                            Cambridge English School,<br />
-                                            Main Road, Near Bus Stand,<br />
-                                            Doddaballapur, Karnataka 561203
+                                            NH-48, Doddaballapura Main Rd,<br />
+                                            Dargajogihalli, Doddaballapura,<br />
+                                            Karnataka 561203
                                         </p>
                                     </div>
                                 </div>

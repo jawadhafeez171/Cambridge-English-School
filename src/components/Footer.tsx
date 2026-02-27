@@ -54,9 +54,9 @@ export default function Footer() {
                             <li className="flex items-start">
                                 <MapPin size={20} className="mr-3 text-secondary-light shrink-0 mt-0.5" />
                                 <span className="text-blue-100 text-sm leading-relaxed">
-                                    Cambridge English School,<br />
-                                    Main Road, Near Bus Stand,<br />
-                                    Doddaballapur, Karnataka 561203
+                                    NH-48, Doddaballapura Main Rd,<br />
+                                    Dargajogihalli, Doddaballapura,<br />
+                                    Karnataka 561203
                                 </span>
                             </li>
                             <li className="flex items-center">

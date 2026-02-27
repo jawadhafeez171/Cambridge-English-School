@@ -14,7 +14,7 @@ export default function Blog() {
             title: "The Importance of Discipline in Early Education",
             excerpt: "Why setting a structured routine early on is crucial for long-term academic and personal success for children.",
             date: "August 15, 2025",
-            author: "Mrs. Seema Yasmeen",
+            author: "Miss Seema Yasmeen",
             category: "Education",
             image: "/images/School 2.jpeg"
         },

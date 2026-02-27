@@ -96,7 +96,7 @@ export default function About() {
                                     {/* Note: User did not provide explicit principal picture, placeholder used */}
                                 </div>
                                 <div className="text-center mt-4">
-                                    <h3 className="font-bold text-lg text-gray-800">Mrs. Seema Yasmeen</h3>
+                                    <h3 className="font-bold text-lg text-gray-800">Miss Seema Yasmeen</h3>
                                     <p className="text-sm text-primary font-medium">Principal</p>
                                 </div>
                             </div>
