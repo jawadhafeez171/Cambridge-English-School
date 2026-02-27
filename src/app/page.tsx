@@ -32,20 +32,20 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/admissions"
-                className="bg-secondary hover:bg-secondary-light text-white font-semibold px-6 py-3 rounded-md text-center transition-colors flex items-center justify-center gap-2"
+                className="bg-secondary hover:bg-secondary-light text-white font-semibold px-6 py-3 rounded-md text-center transition-colors flex items-center justify-center gap-2 w-full sm:w-[220px]"
               >
                 Apply for Admission
                 <ArrowRight size={18} />
               </Link>
               <Link
                 href="/contact"
-                className="bg-white hover:bg-gray-100 text-primary font-semibold px-6 py-3 rounded-md text-center transition-colors"
+                className="bg-white hover:bg-gray-100 text-primary font-semibold px-6 py-3 rounded-md text-center transition-colors flex items-center justify-center w-full sm:w-[220px]"
               >
                 Enquire Now
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-md text-center transition-colors"
+                className="border-2 border-white hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-md text-center transition-colors flex items-center justify-center w-full sm:w-[220px]"
               >
                 Book Campus Visit
               </Link>
@@ -120,7 +120,7 @@ export default function Home() {
                   src="/images/gallery/gallery-24.webp"
                   alt="School Campus"
                   fill
-                  className="object-cover"
+                  className="object-cover transform scale-[1.08] origin-top"
                 />
               </div>
               {/* Decorative block */}

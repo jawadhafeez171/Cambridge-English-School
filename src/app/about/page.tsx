@@ -11,8 +11,9 @@ export default function About() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Page Header */}
-            <section className="bg-primary text-white py-16 md:py-24">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <section className="relative bg-gradient-to-r from-primary via-blue-900 to-primary-light text-white py-16 md:py-24 overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/images/gallery/gallery-5.webp')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
                     <p className="text-blue-100 max-w-2xl mx-auto text-lg">
                         Dedicated to academic excellence and moral integrity since 2005.

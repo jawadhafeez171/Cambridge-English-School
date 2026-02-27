@@ -37,8 +37,9 @@ export default function Gallery() {
     return (
         <div className="flex flex-col min-h-screen bg-gray-50">
             {/* Page Header */}
-            <section className="bg-primary text-white py-16 md:py-24">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <section className="relative bg-gradient-to-r from-primary via-blue-900 to-primary-light text-white py-16 md:py-24 overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/images/gallery/gallery-6.webp')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">Photo Gallery</h1>
                     <p className="text-blue-100 max-w-2xl mx-auto text-lg">
                         Glimpses of academic excellence, extracurricular vibrancy, and campus life.
@@ -80,7 +81,7 @@ export default function Gallery() {
                                         width={800}
                                         height={600}
                                         layout="responsive"
-                                        className="object-cover w-full h-auto transition-transform duration-700 group-hover:scale-110"
+                                        className="object-cover w-full h-auto transform scale-[1.08] origin-top transition-transform duration-700 group-hover:scale-[1.15]"
                                     />
                                 </div>
 

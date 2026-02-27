@@ -10,8 +10,9 @@ export default function Admissions() {
     return (
         <div className="flex flex-col min-h-screen bg-gray-50">
             {/* Page Header */}
-            <section className="bg-primary text-white py-16 md:py-24">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <section className="relative bg-gradient-to-r from-primary via-blue-900 to-primary-light text-white py-16 md:py-24 overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/images/gallery/gallery-24.webp')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">Admissions</h1>
                     <p className="text-blue-100 max-w-2xl mx-auto text-lg">
                         Join the Cambridge English School family. Simple, transparent, and merit-based admission process.
@@ -148,10 +149,10 @@ export default function Admissions() {
                             <h3 className="text-2xl font-bold mb-4">School Prospectus</h3>
                             <p className="text-blue-100 mb-8 text-sm">Download our complete school prospectus to learn more about our curriculum, faculty, and facilities.</p>
 
-                            <button className="w-full bg-secondary hover:bg-secondary-light text-white font-bold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2 group">
+                            <a href="/prospectus.pdf" download="Cambridge_English_School_Prospectus.pdf" className="w-full bg-secondary hover:bg-secondary-light text-white font-bold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2 group">
                                 <Download size={20} className="group-hover:animate-bounce" />
                                 Download PDF
-                            </button>
+                            </a>
                         </div>
 
                         {/* Online Enquiry Form */}
