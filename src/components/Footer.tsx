@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, MapPin, Phone, Facebook, Instagram, Youtube } from "lucide-react";
 
 export default function Footer() {
@@ -8,9 +9,16 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                     {/* School Info */}
                     <div>
-                        <div className="flex items-center gap-2 mb-4">
-                            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary font-bold text-xl">
-                                C
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="relative w-14 h-14 bg-white rounded-full flex items-center justify-center overflow-hidden p-1">
+                                <div className="relative w-full h-full">
+                                    <Image
+                                        src="/images/logo.webp"
+                                        alt="Cambridge English School Logo"
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
                             </div>
                             <div className="flex flex-col">
                                 <span className="font-bold text-white text-xl leading-tight">Cambridge English School</span>
@@ -38,6 +46,7 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold mb-4 text-secondary-light">Quick Links</h3>
                         <ul className="space-y-2">
                             <li><Link href="/about" className="text-blue-100 hover:text-white transition-colors text-sm">About Us</Link></li>
+                            <li><Link href="/principal" className="text-blue-100 hover:text-white transition-colors text-sm">Principal&apos;s Message</Link></li>
                             <li><Link href="/academics" className="text-blue-100 hover:text-white transition-colors text-sm">Academics</Link></li>
                             <li><Link href="/admissions" className="text-blue-100 hover:text-white transition-colors text-sm">Admissions</Link></li>
                             <li><Link href="/facilities" className="text-blue-100 hover:text-white transition-colors text-sm">Facilities</Link></li>

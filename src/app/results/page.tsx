@@ -142,7 +142,7 @@ export default function Results() {
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
                             <Image
-                                src="/images/School 4.webp"
+                                src="/images/gallery/gallery-1.webp"
                                 alt="Sports Achievements"
                                 fill
                                 className="object-cover"

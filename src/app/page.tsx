@@ -117,7 +117,7 @@ export default function Home() {
             <div className="lg:w-1/2 relative">
               <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="/images/School 1.webp"
+                  src="/images/gallery/gallery-24.webp"
                   alt="School Campus"
                   fill
                   className="object-cover"

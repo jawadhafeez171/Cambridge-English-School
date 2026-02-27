@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Target, Compass, BookOpen, Shield, HeartHandshake, Award } from "lucide-react";
 
 export const metadata = {
@@ -88,15 +89,16 @@ export default function About() {
                     <div className="flex flex-col md:flex-row gap-12 items-center">
                         <div className="md:w-1/3">
                             <div className="border border-gray-200 p-4 rounded-xl bg-gray-50 max-w-sm mx-auto shadow-md">
-                                <div className="relative aspect-[3/4] w-full bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center text-gray-400">
-                                    <span className="flex flex-col items-center">
-                                        <Award size={48} className="text-primary mb-2 opacity-30" />
-                                        <span>Principal's Portrait</span>
-                                    </span>
-                                    {/* Note: User did not provide explicit principal picture, placeholder used */}
+                                <div className="relative aspect-[3/4] w-full bg-gray-200 rounded-lg overflow-hidden">
+                                    <Image
+                                        src="/images/principal-message.webp"
+                                        alt="Miss Seema Yasmeen - Principal"
+                                        fill
+                                        className="object-cover object-top"
+                                    />
                                 </div>
                                 <div className="text-center mt-4">
-                                    <h3 className="font-bold text-lg text-gray-800">Miss Seema Yasmeen</h3>
+                                    <h3 className="font-bold text-lg text-gray-800 font-serif">Miss Seema Yasmeen</h3>
                                     <p className="text-sm text-primary font-medium">Principal</p>
                                 </div>
                             </div>
@@ -111,15 +113,15 @@ export default function About() {
                                 <p className="mb-4">
                                     Welcome to Cambridge English School. For over 15 years, we have been committed to providing a sanctuary of learning where every child from Doddaballapur and surrounding areas can receive a top-tier English-medium education.
                                 </p>
-                                <p className="mb-4">
+                                <p className="mb-6">
                                     We are distinctly structured and disciplined. We firmly believe that academic success, particularly in the critical SSLC examinations, requires a rigorous and supportive environment. Our teachers do not just teach; they mentor, guide, and push our students to exceed their own expectations.
                                 </p>
-                                <p className="mb-4">
-                                    Our focus is not on flashy infrastructure, but on core substance: excellent teaching, a safe environment, and strong moral values. We strive to graduate students who are not only academically proficient but also individuals of high character and integrity.
-                                </p>
-                                <p className="italic font-medium text-gray-800 mt-6">
-                                    "Education is the most powerful weapon which you can use to change the world." Let us build that future together.
-                                </p>
+                                <Link
+                                    href="/principal"
+                                    className="inline-flex items-center justify-center bg-primary hover:bg-primary-light text-white font-bold py-3 px-6 rounded-md transition-colors"
+                                >
+                                    Read Full Message &rarr;
+                                </Link>
                             </div>
                         </div>
                     </div>

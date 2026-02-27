@@ -12,42 +12,42 @@ export default function Facilities() {
             title: "Spacious Classrooms",
             description: "Well-ventilated, well-lit spaces designed for maximum focus. Equipped with comfortable seating and essential teaching aids to facilitate effective learning interactions.",
             icon: Users,
-            image: "/images/School 2.webp", // Placeholder since specific classroom image doesn't exist among the 5 files
+            image: "/images/gallery/gallery-3.webp",
             color: "bg-blue-50 text-blue-600 border-blue-100"
         },
         {
             title: "Science Laboratory",
             description: "Fully equipped with modern apparatus to ensure students can practically understand theoretical concepts in Physics, Chemistry, and Biology.",
             icon: FlaskConical,
-            image: "/images/School 1.webp",
+            image: "/images/gallery/gallery-24.webp",
             color: "bg-amber-50 text-amber-600 border-amber-100"
         },
         {
             title: "Computer Lab",
             description: "Modern computer systems with internet access, teaching students essential digital literacy, coding basics, and research skills under strict supervision.",
             icon: Monitor,
-            image: "/images/School 3.webp",
+            image: "/images/gallery/gallery-12.webp",
             color: "bg-indigo-50 text-indigo-600 border-indigo-100"
         },
         {
             title: "School Library",
             description: "A quiet sanctuary housing thousands of books ranging from academic references to classic literature and modern fiction to foster a love for reading.",
             icon: BookOpen,
-            image: "/images/School 5.webp",
+            image: "/images/gallery/gallery-9.webp",
             color: "bg-emerald-50 text-emerald-600 border-emerald-100"
         },
         {
             title: "Playground & Sports",
             description: "A large, safe playground where students participate in daily physical training, annual sports meets, and team games like Volleyball and Kho-kho.",
             icon: Trophy,
-            image: "/images/School 4.webp",
+            image: "/images/gallery/gallery-11.webp",
             color: "bg-orange-50 text-orange-600 border-orange-100"
         },
         {
             title: "Transportation",
             description: "Safe and reliable bus facility covering all major routes in and around Doddaballapur, ensuring secure transit for every child.",
             icon: Bus,
-            image: "/images/School.webp",
+            image: "/images/gallery/gallery-13.webp",
             color: "bg-slate-50 text-slate-600 border-slate-100"
         }
     ];
