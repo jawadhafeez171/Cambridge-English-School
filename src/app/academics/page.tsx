@@ -67,7 +67,7 @@ export default function Academics() {
 
                         <div className="relative h-[500px] w-full rounded-lg overflow-hidden shadow-xl">
                             <Image
-                                src="/images/School 2.jpeg"
+                                src="/images/School 2.webp"
                                 alt="Students studying in classroom"
                                 fill
                                 className="object-cover"
@@ -110,7 +110,7 @@ export default function Academics() {
                             </div>
                             <div className="relative min-h-[300px] md:min-h-full">
                                 <Image
-                                    src="/images/School 3.jpeg"
+                                    src="/images/School 3.webp"
                                     alt="English reading activity"
                                     fill
                                     className="object-cover"
@@ -164,10 +164,10 @@ export default function Academics() {
                         <div className="lg:w-1/2 order-2 lg:order-1 relative">
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="relative h-[250px] rounded-lg overflow-hidden">
-                                    <Image src="/images/School 4.jpeg" alt="Sports Activity" fill className="object-cover" />
+                                    <Image src="/images/School 4.webp" alt="Sports Activity" fill className="object-cover" />
                                 </div>
                                 <div className="relative h-[250px] rounded-lg overflow-hidden mt-8">
-                                    <Image src="/images/School 5.jpeg" alt="Library" fill className="object-cover" />
+                                    <Image src="/images/School 5.webp" alt="Library" fill className="object-cover" />
                                 </div>
                             </div>
                         </div>

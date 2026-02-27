@@ -1,0 +1,18 @@
+const sharp = require('sharp');
+const fs = require('fs');
+const path = require('path');
+
+const dir = path.join(__dirname, 'public', 'images');
+
+fs.readdirSync(dir).forEach(file => {
+    if (file.endsWith('.jpeg')) {
+        const inputPath = path.join(dir, file);
+        const outputPath = path.join(dir, file.replace('.jpeg', '.webp'));
+
+        sharp(inputPath)
+            .webp({ quality: 80 })
+            .toFile(outputPath)
+            .then(info => console.log(`Converted ${file} to WebP`, info))
+            .catch(err => console.error(`Error converting ${file}:`, err));
+    }
+});

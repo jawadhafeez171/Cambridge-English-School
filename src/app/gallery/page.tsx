@@ -11,12 +11,12 @@ export default function Gallery() {
 
     // Mapping provided images to categories
     const photos = [
-        { src: "/images/School 1.jpeg", alt: "Science Exhibition", category: "Classroom" },
-        { src: "/images/School 2.jpeg", alt: "Classroom Session", category: "Classroom" },
-        { src: "/images/School 3.jpeg", alt: "Independence Day Reading", category: "Festivals" },
-        { src: "/images/School 4.jpeg", alt: "Annual Sports Meet", category: "Sports Day" },
-        { src: "/images/School 5.jpeg", alt: "Library Activity", category: "Classroom" },
-        { src: "/images/School.jpeg", alt: "School Annual Day Setup", category: "Annual Day" }
+        { src: "/images/School 1.webp", alt: "Science Exhibition", category: "Classroom" },
+        { src: "/images/School 2.webp", alt: "Classroom Session", category: "Classroom" },
+        { src: "/images/School 3.webp", alt: "Independence Day Reading", category: "Festivals" },
+        { src: "/images/School 4.webp", alt: "Annual Sports Meet", category: "Sports Day" },
+        { src: "/images/School 5.webp", alt: "Library Activity", category: "Classroom" },
+        { src: "/images/School.webp", alt: "School Annual Day Setup", category: "Annual Day" }
     ];
 
     const filteredPhotos = activeCategory === "All"

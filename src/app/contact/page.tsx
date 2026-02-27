@@ -62,8 +62,7 @@ export default function Contact() {
                                     </div>
                                     <div>
                                         <h3 className="text-lg font-bold text-gray-800 mb-1">Email Address</h3>
-                                        <p className="text-gray-600">info@cambridgeschooldbp.com</p>
-                                        <p className="text-gray-600">admissions@cambridgeschooldbp.com</p>
+                                        <p className="text-gray-600">principalcehs@gmail.com</p>
                                     </div>
                                 </div>
 

@@ -10,7 +10,7 @@ export default function Home() {
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/School.jpeg"
+            src="/images/School.webp"
             alt="Students at Cambridge English School"
             fill
             className="object-cover"
@@ -117,7 +117,7 @@ export default function Home() {
             <div className="lg:w-1/2 relative">
               <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="/images/School 1.jpeg"
+                  src="/images/School 1.webp"
                   alt="School Campus"
                   fill
                   className="object-cover"

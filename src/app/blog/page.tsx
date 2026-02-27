@@ -16,7 +16,7 @@ export default function Blog() {
             date: "August 15, 2025",
             author: "Miss Seema Yasmeen",
             category: "Education",
-            image: "/images/School 2.jpeg"
+            image: "/images/School 2.webp"
         },
         {
             id: 2,
@@ -25,7 +25,7 @@ export default function Blog() {
             date: "September 02, 2025",
             author: "Academic Coordinator",
             category: "Academics",
-            image: "/images/School 1.jpeg"
+            image: "/images/School 1.webp"
         },
         {
             id: 3,
@@ -34,7 +34,7 @@ export default function Blog() {
             date: "October 10, 2025",
             author: "Physical Education Dept.",
             category: "Events",
-            image: "/images/School 4.jpeg"
+            image: "/images/School 4.webp"
         }
     ];
 
