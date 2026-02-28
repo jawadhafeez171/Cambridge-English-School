@@ -26,19 +26,18 @@ export default function Footer() {
                     {/* School Info */}
                     <div>
                         <div className="flex items-center gap-3 mb-5">
-                            <div className="relative w-12 h-12 bg-white/10 rounded-full flex items-center justify-center overflow-hidden p-1.5 shrink-0">
-                                <div className="relative w-full h-full">
-                                    <Image
-                                        src="/images/logo.webp"
-                                        alt="Cambridge English School Logo"
-                                        fill
-                                        className="object-contain filter brightness-0 invert"
-                                    />
-                                </div>
+                            <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center overflow-hidden shrink-0 shadow-md">
+                                <Image
+                                    src="/images/logo.webp"
+                                    alt="Cambridge English School Logo"
+                                    width={48}
+                                    height={48}
+                                    className="object-contain"
+                                />
                             </div>
                             <div>
                                 <p className="font-serif font-bold text-white text-lg leading-tight">Cambridge English School</p>
-                                <p className="text-secondary-light text-xs font-semibold tracking-widest uppercase mt-0.5">Estd. 2005</p>
+                                <p className="text-secondary-light text-xs font-semibold tracking-widest uppercase mt-0.5">Estd. 2002</p>
                             </div>
                         </div>
 
