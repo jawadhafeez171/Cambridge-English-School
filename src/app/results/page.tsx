@@ -35,7 +35,7 @@ export default function Results() {
                                 <Medal size={16} /> Latest SSLC Results
                             </div>
                             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                                100% Pass Result for 5 Consecutive Years
+                                100% Result from past 10 Years
                             </h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
                                 Cambridge English School has consistently secured a 100% pass rate in the Karnataka State Board SSLC examinations. Our structured curriculum and mandatory preparatory exams ensure that every single child crosses the finish line successfully.

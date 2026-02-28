@@ -15,7 +15,7 @@ export default function Academics() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">Academics</h1>
                     <p className="text-blue-100 max-w-2xl mx-auto text-lg">
-                        A structured, disciplined approach to the Karnataka State Board Curriculum, building strong foundations from Nursery to Grade 10.
+                        A structured, disciplined approach to the Karnataka State Board Curriculum, building strong foundations from Pre-Nursery to 5th STD.
                     </p>
                 </div>
             </section>
@@ -39,7 +39,7 @@ export default function Academics() {
                                         <LayoutTemplate size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-gray-800 mb-2">Pre-Primary (Nursery, LKG, UKG)</h3>
+                                        <h3 className="text-xl font-bold text-gray-800 mb-2">Pre-Primary (Pre-Nursery, LKG, UKG)</h3>
                                         <p className="text-gray-600">Play-way method combined with structured early learning. Focus on basic numeracy, alphabet recognition, and motor skills.</p>
                                     </div>
                                 </div>
@@ -49,8 +49,8 @@ export default function Academics() {
                                         <Users size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-gray-800 mb-2">Lower Primary (Grades 1 to 5)</h3>
-                                        <p className="text-gray-600">Building strong foundations in English, Mathematics, Environmental Science, and Kannada as a subject.</p>
+                                        <h3 className="text-xl font-bold text-gray-800 mb-2">Primary (1st to 5th STD)</h3>
+                                        <p className="text-gray-600">Building strong foundations in English, Mathematics, Environmental Science, and language subjects.</p>
                                     </div>
                                 </div>
 
@@ -59,8 +59,8 @@ export default function Academics() {
                                         <BookOpen size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-gray-800 mb-2">Higher Primary & High School (Grades 6 to 10)</h3>
-                                        <p className="text-gray-600">Rigorous academic training in core subjects: Mathematics, General Science, Social Science, First Language English, Second Language Kannada, and Third Language Hindi.</p>
+                                        <h3 className="text-xl font-bold text-gray-800 mb-2">Languages Offered</h3>
+                                        <p className="text-gray-600">First language Kannada, Second language English, Third language Hindi. Hindi subject is included from U.K.G.</p>
                                     </div>
                                 </div>
                             </div>
@@ -75,8 +75,8 @@ export default function Academics() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
                                 <div className="text-white">
-                                    <h3 className="text-2xl font-bold mb-2">Discipline in Learning</h3>
-                                    <p className="text-gray-200">Our classrooms are structured to minimize distractions.</p>
+                                    <h3 className="text-2xl font-bold mb-2">AI Model Digital Classrooms</h3>
+                                    <p className="text-gray-200">Our classrooms are equipped with TV and Tabs for an interactive learning experience.</p>
                                 </div>
                             </div>
                         </div>

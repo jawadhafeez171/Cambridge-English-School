@@ -11,37 +11,39 @@ export default function About() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Page Header */}
-            <section className="relative bg-gradient-to-r from-primary via-blue-900 to-primary-light text-white py-16 md:py-24 overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/images/gallery/gallery-5.webp')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-                    <p className="text-blue-100 max-w-2xl mx-auto text-lg">
+            <section className="relative bg-primary text-white py-20 md:py-28 overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/images/gallery/gallery-5.webp')] bg-cover bg-center opacity-10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary-light/80" />
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                    <p className="text-secondary-light font-semibold text-xs tracking-[0.2em] uppercase mb-4">Our Story</p>
+                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">About Us</h1>
+                    <div className="h-[2px] w-16 bg-secondary mx-auto mb-6" />
+                    <p className="text-blue-100/80 max-w-xl mx-auto text-lg">
                         Dedicated to academic excellence and moral integrity since 2005.
                     </p>
                 </div>
             </section>
 
             {/* Vision & Mission */}
-            <section className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid md:grid-cols-2 gap-12">
-                        <div className="bg-blue-50 p-10 rounded-xl border border-blue-100 flex flex-col items-center text-center">
-                            <div className="w-16 h-16 bg-white rounded-full shadow-sm flex items-center justify-center text-primary mb-6">
-                                <Compass size={32} />
+            <section className="py-24 bg-white">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <div className="bg-accent-bg border border-border-light rounded-2xl p-10 flex flex-col">
+                            <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+                                <Compass size={28} />
                             </div>
-                            <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
-                            <p className="text-gray-600 leading-relaxed text-lg">
+                            <h2 className="font-serif text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
+                            <p className="text-gray-600 leading-relaxed flex-1">
                                 To be the leading educational institution in Doddaballapur that empowers students from all backgrounds with high-quality English-medium education, instilling strong moral values and preparing them for a successful future.
                             </p>
                         </div>
-
-                        <div className="bg-amber-50 p-10 rounded-xl border border-amber-100 flex flex-col items-center text-center">
-                            <div className="w-16 h-16 bg-white rounded-full shadow-sm flex items-center justify-center text-secondary mb-6">
-                                <Target size={32} />
+                        <div className="bg-[#fffbf0] border border-amber-100 rounded-2xl p-10 flex flex-col">
+                            <div className="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6">
+                                <Target size={28} />
                             </div>
-                            <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
-                            <p className="text-gray-600 leading-relaxed text-lg">
-                                To provide a structured, disciplined, and safe learning environment where students master the Karnataka State Board curriculum, achieve outstanding SSLC results, and develop into responsible, capable citizens.
+                            <h2 className="font-serif text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
+                            <p className="text-gray-600 leading-relaxed flex-1">
+                                To provide a structured, disciplined, and safe learning environment where students master the Karnataka State Board curriculum, achieve outstanding results, and develop into responsible, capable citizens.
                             </p>
                         </div>
                     </div>
@@ -49,138 +51,91 @@ export default function About() {
             </section>
 
             {/* Core Values */}
-            <section className="py-20 bg-gray-50 border-y border-gray-200">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-primary mb-4">Our Core Values</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">These four pillars guide our daily actions and our approach to education.</p>
+            <section className="py-24 bg-accent-bg border-y border-border-light">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-14">
+                        <p className="text-secondary font-semibold text-xs tracking-[0.18em] uppercase mb-3">Guiding Principles</p>
+                        <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary">Our Core Values</h2>
                     </div>
-
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
-                            <Shield size={40} className="mx-auto text-secondary mb-4" />
-                            <h3 className="text-xl font-bold text-gray-800 mb-2">Discipline</h3>
-                            <p className="text-gray-600 text-sm">We believe routine, respect, and structure are the foundations of all learning.</p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
-                            <Target size={40} className="mx-auto text-primary mb-4" />
-                            <h3 className="text-xl font-bold text-gray-800 mb-2">Integrity</h3>
-                            <p className="text-gray-600 text-sm">Honesty and strong moral principles guide our students in every interaction.</p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
-                            <HeartHandshake size={40} className="mx-auto text-secondary mb-4" />
-                            <h3 className="text-xl font-bold text-gray-800 mb-2">Respect</h3>
-                            <p className="text-gray-600 text-sm">Treating peers, teachers, and parents with utmost respect is mandatory.</p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
-                            <BookOpen size={40} className="mx-auto text-primary mb-4" />
-                            <h3 className="text-xl font-bold text-gray-800 mb-2">Academic Excellence</h3>
-                            <p className="text-gray-600 text-sm">We demand rigorous focus and hard work to achieve top SSLC results.</p>
-                        </div>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {[
+                            { Icon: Shield, title: "Discipline", body: "Routine, respect, and structure are the foundations of all learning.", color: "text-blue-600 bg-blue-50" },
+                            { Icon: Target, title: "Integrity", body: "Honesty and strong moral principles guide our students in every interaction.", color: "text-primary bg-indigo-50" },
+                            { Icon: HeartHandshake, title: "Respect", body: "Treating peers, teachers, and community with utmost respect is mandatory.", color: "text-amber-700 bg-amber-50" },
+                            { Icon: BookOpen, title: "Excellence", body: "We demand rigorous focus and hard work to achieve top academic results.", color: "text-emerald-700 bg-emerald-50" },
+                        ].map(({ Icon, title, body, color }) => (
+                            <div key={title} className="bg-white rounded-2xl p-7 shadow-sm border border-border-light text-center hover:shadow-md transition-all hover:-translate-y-1">
+                                <div className={`w-12 h-12 ${color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                                    <Icon size={22} />
+                                </div>
+                                <h3 className="font-serif font-bold text-gray-900 text-lg mb-2">{title}</h3>
+                                <p className="text-gray-500 text-sm leading-relaxed">{body}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* Principal's Message */}
-            <section className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Principal Snapshot */}
+            <section className="py-24 bg-white">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row gap-12 items-center">
-                        <div className="md:w-1/3">
-                            <div className="border border-gray-200 p-4 rounded-xl bg-gray-50 max-w-sm mx-auto shadow-md">
-                                <div className="relative aspect-[3/4] w-full bg-gray-200 rounded-lg overflow-hidden">
-                                    <Image
-                                        src="/images/principal-message.webp"
-                                        alt="Miss Seema Yasmeen - Principal"
-                                        fill
-                                        className="object-cover object-top"
-                                    />
+                        <div className="md:w-2/5">
+                            <div className="relative bg-gray-50 border border-border-light p-4 rounded-2xl max-w-xs mx-auto shadow-lg">
+                                <div className="relative aspect-[3/4] w-full bg-gray-200 rounded-xl overflow-hidden">
+                                    <Image src="/images/principal-message.webp" alt="Mrs. Seema Yasmin - Principal" fill className="object-cover object-top" />
                                 </div>
-                                <div className="text-center mt-4">
-                                    <h3 className="font-bold text-lg text-gray-800 font-serif">Miss Seema Yasmeen</h3>
-                                    <p className="text-sm text-primary font-medium">Principal</p>
+                                <div className="text-center mt-4 pb-1">
+                                    <h3 className="font-serif font-bold text-lg text-gray-900">Mrs. Seema Yasmin</h3>
+                                    <p className="text-secondary text-xs font-semibold uppercase tracking-wider mt-0.5">Principal</p>
                                 </div>
                             </div>
                         </div>
-
-                        <div className="md:w-2/3">
-                            <h2 className="text-3xl font-bold text-primary mb-6 flex items-center">
-                                <span className="w-8 h-1 bg-secondary inline-block mr-3"></span>
-                                Principal's Message
-                            </h2>
-                            <div className="prose prose-lg text-gray-600">
-                                <p className="mb-4">
-                                    Welcome to Cambridge English School. For over 15 years, we have been committed to providing a sanctuary of learning where every child from Doddaballapur and surrounding areas can receive a top-tier English-medium education.
-                                </p>
-                                <p className="mb-6">
-                                    We are distinctly structured and disciplined. We firmly believe that academic success, particularly in the critical SSLC examinations, requires a rigorous and supportive environment. Our teachers do not just teach; they mentor, guide, and push our students to exceed their own expectations.
-                                </p>
-                                <Link
-                                    href="/principal"
-                                    className="inline-flex items-center justify-center bg-primary hover:bg-primary-light text-white font-bold py-3 px-6 rounded-md transition-colors"
-                                >
-                                    Read Full Message &rarr;
-                                </Link>
-                            </div>
+                        <div className="md:w-3/5">
+                            <p className="text-secondary font-semibold text-xs tracking-[0.18em] uppercase mb-4">Principal&apos;s Message</p>
+                            <h2 className="font-serif text-3xl font-bold text-primary mb-6">A Word from Our Leadership</h2>
+                            <p className="text-gray-600 mb-4 leading-relaxed text-lg">
+                                Welcome to Cambridge English School. For over 15 years, we have been committed to providing a sanctuary of learning where every child from Doddaballapur and surrounding areas can receive a top-tier English-medium education.
+                            </p>
+                            <p className="text-gray-500 mb-8 leading-relaxed">
+                                We are distinctly structured and disciplined. We firmly believe that academic success requires a rigorous and supportive environment. Our teachers mentor, guide, and push our students to exceed their own expectations.
+                            </p>
+                            <Link href="/principal" className="inline-flex items-center justify-center bg-primary hover:bg-primary-light text-white font-semibold py-3 px-7 rounded-full transition-all shadow-sm hover:shadow-md">
+                                Read Full Message →
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Milestones / Journey */}
-            <section className="py-20 bg-primary text-white">
+            {/* Journey / Milestones */}
+            <section className="py-24 bg-[#0a1847] text-white">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold mb-4 text-white">Our Journey</h2>
-                        <p className="text-blue-200">Milestones of Cambridge English School</p>
+                        <p className="text-secondary-light font-semibold text-xs tracking-[0.2em] uppercase mb-4">Our History</p>
+                        <h2 className="font-serif text-3xl md:text-4xl font-bold text-white">Milestones of Excellence</h2>
+                        <div className="h-[2px] w-16 bg-secondary mx-auto mt-6" />
                     </div>
 
-                    <div className="relative border-l-2 border-blue-400 ml-3 md:ml-0 md:border-none space-y-12">
+                    <div className="relative pl-8 border-l-2 border-white/10 space-y-12">
                         {[
-                            { year: "2005", title: "Inception", desc: "Started with just 30 students in Nursery to Grade 3, aiming to provide quality English education to Doddaballapur." },
+                            { year: "2005", title: "Inception", desc: "Started with 30 students in Nursery to Grade 3, aiming to provide quality English education to Doddaballapur." },
                             { year: "2010", title: "State Board Affiliation", desc: "Officially recognized by the Department of Public Instruction for Grades 1 to 10." },
-                            { year: "2012", title: "First SSLC Batch", desc: "Our very first 10th-grade batch achieved a 100% pass result, setting a benchmark for years to come." },
-                            { year: "2020", title: "Digital Infrastructure", desc: "Upgraded computer labs and introduced smart classes to keep education uninterrupted." },
-                            { year: "2025", title: "Excellence Continued", desc: "Over 800+ students and consistently producing district toppers every single year." }
-                        ].map((item, index) => (
-                            <div key={index} className="relative flex flex-col md:flex-row items-start md:items-center">
-                                <div className="hidden md:flex w-1/2 justify-end pr-8">
-                                    {index % 2 === 0 ? (
-                                        <div className="text-right">
-                                            <h3 className="text-xl font-bold text-secondary-light">{item.title}</h3>
-                                            <p className="text-blue-100 text-sm mt-1">{item.desc}</p>
-                                        </div>
-                                    ) : (
-                                        <div className="text-4xl font-bold text-blue-300 opacity-50">{item.year}</div>
-                                    )}
-                                </div>
-
-                                <div className="absolute left-[-29px] md:relative md:left-0 w-14 h-14 bg-blue-800 rounded-full border-4 border-primary flex items-center justify-center font-bold text-white shrink-0 z-10 shadow-lg">
-                                    <div className="w-4 h-4 rounded-full bg-secondary-light"></div>
-                                </div>
-
-                                <div className="pl-8 md:pl-0 md:pr-0 md:w-1/2 md:pl-8 flex flex-col">
-                                    {index % 2 !== 0 ? (
-                                        <div className="text-left mt-1 md:mt-0">
-                                            <h3 className="text-xl font-bold text-secondary-light">{item.title}</h3>
-                                            <p className="text-blue-100 text-sm mt-1">{item.desc}</p>
-                                        </div>
-                                    ) : (
-                                        <div className="text-2xl font-bold text-blue-300 opacity-80 mt-1 md:mt-0">{item.year}</div>
-                                    )}
-                                    {/* Mobile content (shown only on small screens) */}
-                                    <div className="md:hidden mt-2">
-                                        <h3 className="text-lg font-bold text-secondary-light">{item.title}</h3>
-                                        <p className="text-blue-100 text-sm mt-1">{item.desc}</p>
+                            { year: "2012", title: "First SSLC Batch", desc: "Our first 10th-grade batch achieved a 100% pass result, setting a benchmark for years to come." },
+                            { year: "2020", title: "Digital Infrastructure", desc: "Upgraded with AI-model digital classrooms equipped with smart TVs and Tabs." },
+                            { year: "2025", title: "Excellence Continued", desc: "Over 800+ students and consistently producing district toppers every single year." },
+                        ].map(({ year, title, desc }) => (
+                            <div key={year} className="relative">
+                                <div className="absolute -left-[2.35rem] w-4 h-4 rounded-full bg-secondary border-4 border-[#0a1847]" />
+                                <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/8 transition-colors">
+                                    <div className="flex items-baseline gap-4 mb-2">
+                                        <span className="font-serif text-secondary-light text-2xl font-bold">{year}</span>
+                                        <h3 className="font-semibold text-white text-lg">{title}</h3>
                                     </div>
+                                    <p className="text-blue-200/60 text-sm">{desc}</p>
                                 </div>
                             </div>
                         ))}
-
-                        {/* Center Line for Desktop */}
-                        <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-0.5 bg-blue-700 -translate-x-1/2 -z-10"></div>
                     </div>
                 </div>
             </section>

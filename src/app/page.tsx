@@ -1,196 +1,186 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BookOpen, Award, Shield, CheckCircle } from "lucide-react";
+import { ArrowRight, BookOpen, Award, Shield, CheckCircle, Monitor } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="relative w-full h-[600px] md:h-[700px] flex items-center">
-        {/* Background Image Overlay */}
+
+      {/* ─── HERO ─────────────────────────────────────────────────── */}
+      <section className="relative w-full min-h-[92vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/School.webp"
-            alt="Students at Cambridge English School"
+            alt="Cambridge English School Campus"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-blue-900/70 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0c1f6e]/90 via-[#0c1f6e]/70 to-[#0c1f6e]/30" />
         </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-24">
+          <div className="max-w-2xl">
+            {/* Eyebrow */}
+            <div className="flex items-center gap-3 mb-6 fade-in">
+              <span className="h-[2px] w-10 bg-secondary" />
+              <span className="text-secondary font-semibold text-xs tracking-[0.2em] uppercase">Doddaballapur · Est. 2005</span>
+            </div>
+
+            {/* Headline */}
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 fade-in-up text-shadow">
               Strong Foundations.<br />
-              <span className="text-secondary-light">Bright Futures.</span>
+              <span className="text-secondary-light italic">Bright Futures.</span>
             </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl">
-              A disciplined, result-oriented State Board school offering quality English-medium education at affordable fees in Doddaballapur.
+
+            <p className="text-blue-100/90 text-lg md:text-xl mb-10 leading-relaxed max-w-xl fade-in-up">
+              A disciplined, result-oriented State Board school offering quality English‑medium education at affordable fees in Doddaballapur.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/admissions"
-                className="bg-secondary hover:bg-secondary-light text-white font-semibold px-6 py-3 rounded-md text-center transition-colors flex items-center justify-center gap-2 w-full sm:w-[220px]"
-              >
+
+            <div className="flex flex-col sm:flex-row gap-4 fade-in-up">
+              <Link href="/admissions" className="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-light text-white font-bold px-8 py-4 rounded-full transition-all shadow-lg hover:shadow-xl group">
                 Apply for Admission
-                <ArrowRight size={18} />
+                <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
-                href="/contact"
-                className="bg-white hover:bg-gray-100 text-primary font-semibold px-6 py-3 rounded-md text-center transition-colors flex items-center justify-center w-full sm:w-[220px]"
-              >
-                Enquire Now
-              </Link>
-              <Link
-                href="/contact"
-                className="border-2 border-white hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-md text-center transition-colors flex items-center justify-center w-full sm:w-[220px]"
-              >
+              <Link href="/contact" className="inline-flex items-center justify-center border-2 border-white/60 hover:border-white text-white font-semibold px-8 py-4 rounded-full transition-all hover:bg-white/10">
                 Book Campus Visit
               </Link>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Highlights Section */}
-      <section className="py-16 bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Highlight Cards */}
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center transform transition hover:-translate-y-1 hover:shadow-md">
-              <div className="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-4">
-                <CheckCircle size={28} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Admissions Open</h3>
-              <p className="text-gray-600">Nursery to Grade 10 admissions now open for the upcoming academic year.</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center transform transition hover:-translate-y-1 hover:shadow-md">
-              <div className="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-4">
-                <BookOpen size={28} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">State Board Affiliation</h3>
-              <p className="text-gray-600">Strict adherence to Karnataka State Board curriculum focusing on core concepts.</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center transform transition hover:-translate-y-1 hover:shadow-md">
-              <div className="w-14 h-14 bg-amber-50 text-secondary rounded-full flex items-center justify-center mb-4">
-                <Award size={28} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">100% SSLC Results</h3>
-              <p className="text-gray-600">Proudly maintaining a 100% pass rate in SSLC board examinations for the past 5 consecutive years.</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center transform transition hover:-translate-y-1 hover:shadow-md">
-              <div className="w-14 h-14 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-4">
-                <Shield size={28} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Safe & Disciplined</h3>
-              <p className="text-gray-600">A structured learning environment focusing on moral values and discipline.</p>
+        {/* Floating Stats Bar */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="bg-white/95 backdrop-blur-sm rounded-t-2xl shadow-2xl grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-100">
+              {[
+                { num: "100%", label: "SSLC Results (10 yrs)" },
+                { num: "20+", label: "Years of Excellence" },
+                { num: "800+", label: "Students Enrolled" },
+                { num: "50+", label: "District Toppers" },
+              ].map(({ num, label }) => (
+                <div key={label} className="py-5 px-6 text-center">
+                  <div className="text-2xl md:text-3xl font-serif font-bold text-primary">{num}</div>
+                  <div className="text-xs text-gray-500 font-medium mt-1">{label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Brief About Section */}
-      <section className="py-20 bg-white">
+      {/* ─── HIGHLIGHTS ───────────────────────────────────────────── */}
+      <section className="py-24 bg-accent-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-12 items-center">
-            <div className="lg:w-1/2">
-              <h2 className="text-3xl font-bold text-primary mb-6 flex items-center">
-                <span className="w-8 h-1 bg-secondary inline-block mr-3"></span>
-                About Cambridge English School
-              </h2>
-              <p className="text-gray-600 mb-4 leading-relaxed text-lg">
-                Located in the heart of Doddaballapur, Cambridge English School is dedicated to providing high-quality, English-medium education accessible to all. We believe in nurturing academic excellence alongside strong moral values.
-              </p>
-              <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                Our approach is deeply structured and result-oriented, ensuring every student develops a robust academic foundation. We focus heavily on discipline, integrity, respect, and preparing our students rigorously for SSLC exam success.
-              </p>
-              <Link href="/about" className="inline-flex items-center text-primary font-semibold hover:text-primary-light transition-colors group">
-                Read our full story
-                <ArrowRight size={18} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
+          <div className="text-center mb-14">
+            <p className="decorative-line text-secondary font-semibold text-xs tracking-[0.18em] uppercase inline-flex items-center">Why Choose Us</p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mt-3">What Sets Us Apart</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { Icon: CheckCircle, title: "Admissions Open", body: "Pre-Nursery to 5th STD seats available for the upcoming academic year.", color: "text-blue-600 bg-blue-50" },
+              { Icon: BookOpen, title: "State Board Curriculum", body: "Rigorous adherence to Karnataka State Board — core concepts, deeply mastered.", color: "text-indigo-600 bg-indigo-50" },
+              { Icon: Award, title: "100% Results (10 yrs)", body: "An unbroken track record of 100% pass results in SSLC board examinations.", color: "text-amber-600 bg-amber-50" },
+              { Icon: Monitor, title: "AI Digital Classrooms", body: "Modern learning with AI-model digital classrooms equipped with TVs and Tabs.", color: "text-emerald-600 bg-emerald-50" },
+            ].map(({ Icon, title, body, color }) => (
+              <div key={title} className="bg-white rounded-2xl p-7 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-border-light group">
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${color} transition-transform group-hover:scale-110`}>
+                  <Icon size={24} />
+                </div>
+                <h3 className="font-serif font-bold text-gray-900 text-lg mb-2">{title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── ABOUT SECTION ────────────────────────────────────────── */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+            {/* Image side */}
             <div className="lg:w-1/2 relative">
-              <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-xl">
+              <div className="relative h-[480px] w-full rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/gallery/gallery-24.webp"
                   alt="School Campus"
                   fill
-                  className="object-cover transform scale-[1.08] origin-top"
+                  className="object-cover"
                 />
               </div>
-              {/* Decorative block */}
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary rounded-lg -z-10 hidden md:block"></div>
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-100 rounded-lg -z-10 hidden md:block"></div>
+              {/* Floating badge */}
+              <div className="absolute -bottom-6 -right-6 bg-primary text-white rounded-2xl p-6 shadow-xl hidden md:block">
+                <div className="font-serif text-4xl font-bold text-secondary-light">20+</div>
+                <div className="text-xs text-blue-200 font-medium tracking-wide mt-1 uppercase">Years of<br />Excellence</div>
+              </div>
+              <div className="absolute -top-5 -left-5 w-24 h-24 bg-secondary/10 rounded-2xl -z-10 hidden md:block" />
+            </div>
+
+            {/* Text side */}
+            <div className="lg:w-1/2">
+              <p className="decorative-line text-secondary font-semibold text-xs tracking-[0.18em] uppercase inline-flex items-center mb-4">About Us</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6 leading-snug">
+                Nurturing Excellence in<br />
+                <span className="italic text-secondary">Doddaballapur</span>
+              </h2>
+              <p className="text-gray-600 mb-4 leading-relaxed text-lg">
+                Located in the heart of Doddaballapur, Cambridge English School is dedicated to providing high-quality, English-medium education accessible to all.
+              </p>
+              <p className="text-gray-500 mb-8 leading-relaxed">
+                Our approach is deeply structured and result-oriented, ensuring every student develops a robust academic foundation. We focus on discipline, integrity, respect, and preparing students rigorously for academic success.
+              </p>
+              <Link href="/about" className="inline-flex items-center font-semibold text-primary hover:text-primary-light transition-colors group gap-2">
+                Read our full story
+                <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Academic Stats Section */}
-      <section className="py-16 bg-primary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-y border-blue-800 py-12">
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-secondary-light mb-2">100%</div>
-              <div className="text-blue-100 font-medium">SSLC Pass Rate</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-secondary-light mb-2">15+</div>
-              <div className="text-blue-100 font-medium">Years of Excellence</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-secondary-light mb-2">30:1</div>
-              <div className="text-blue-100 font-medium">Student-Teacher Ratio</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-secondary-light mb-2">50+</div>
-              <div className="text-blue-100 font-medium">District Toppers</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Parent Testimonials */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">What Parents Say</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Hear from our community about their experiences with our structured and disciplined approach to education.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* ─── DARK STATS BAND ──────────────────────────────────────── */}
+      <section className="py-16 bg-[#0a1847]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              {
-                text: "The discipline and focus on academics here is unmatched. My son's English communication has improved drastically, and he achieved an outstanding score in his SSLC exams thanks to the teachers' rigorous preparation.",
-                author: "Ramesh K.",
-                role: "Parent of Grade 10 Student"
-              },
-              {
-                text: "We wanted a school that provided quality English-medium education at reasonable fees in Doddaballapur. Cambridge English School exceeded our expectations. The teachers are very dedicated.",
-                author: "Sunita M.",
-                role: "Parent of Grade 7 Student"
-              },
-              {
-                text: "The emphasis on moral values along with studies is what makes this school special. The campus is safe, teachers are approachable, and my daughter loves going to school every day.",
-                author: "Prakash V.",
-                role: "Parent of Grade 4 Student"
-              }
-            ].map((testimonial, i) => (
-              <div key={i} className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 relative">
-                <div className="text-secondary opacity-20 text-6xl absolute top-4 left-4 font-serif">&quot;</div>
-                <p className="text-gray-600 mb-6 relative z-10 italic">&quot;{testimonial.text}&quot;</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-primary font-bold">
-                    {testimonial.author.charAt(0)}
+              { num: "100%", label: "SSLC Pass Rate" },
+              { num: "20+", label: "Years of Excellence" },
+              { num: "30:1", label: "Student-Teacher Ratio" },
+              { num: "50+", label: "District Toppers" },
+            ].map(({ num, label }) => (
+              <div key={label} className="relative">
+                <div className="font-serif text-4xl md:text-5xl font-bold text-secondary-light mb-2">{num}</div>
+                <div className="text-blue-200/70 text-sm font-medium">{label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── TESTIMONIALS ─────────────────────────────────────────── */}
+      <section className="py-24 bg-accent-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="decorative-line text-secondary font-semibold text-xs tracking-[0.18em] uppercase inline-flex items-center">Testimonials</p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mt-3">What Parents Say</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+            {[
+              { text: "The discipline and focus on academics here is unmatched. My son's English communication has improved drastically, and he achieved an outstanding score in his SSLC exams.", author: "Ramesh K.", role: "Parent of Grade 10 Student" },
+              { text: "We wanted quality English-medium education at reasonable fees in Doddaballapur. Cambridge English School exceeded our expectations. The teachers are incredibly dedicated.", author: "Sunita M.", role: "Parent of Grade 7 Student" },
+              { text: "The emphasis on moral values along with studies is what makes this school special. The campus is safe, teachers are approachable, and my daughter loves going to school.", author: "Prakash V.", role: "Parent of Grade 4 Student" },
+            ].map(({ text, author, role }, i) => (
+              <div key={i} className="bg-white rounded-2xl p-8 shadow-sm border border-border-light relative overflow-hidden hover:shadow-md transition-shadow">
+                <div className="font-serif text-8xl text-secondary/10 absolute -top-4 -left-2 leading-none select-none">&ldquo;</div>
+                <p className="text-gray-600 text-sm leading-relaxed mb-6 relative z-10 italic">&ldquo;{text}&rdquo;</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold font-serif text-sm shrink-0">
+                    {author.charAt(0)}
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-800">{testimonial.author}</h4>
-                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                    <p className="font-semibold text-gray-900 text-sm">{author}</p>
+                    <p className="text-gray-400 text-xs">{role}</p>
                   </div>
                 </div>
               </div>
@@ -199,41 +189,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest News & Announcements */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-end mb-12">
-            <div>
-              <h2 className="text-3xl font-bold text-primary mb-4">Latest News & Announcements</h2>
-              <p className="text-gray-600">Stay updated with important notices and events.</p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border border-gray-200 rounded-lg p-6 hover:border-primary transition-colors flex gap-6 items-start">
-              <div className="bg-blue-50 text-center p-3 rounded-md shrink-0 w-20">
-                <div className="text-sm font-bold text-primary uppercase">Mar</div>
-                <div className="text-2xl font-bold text-gray-800">15</div>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">SSLC Preparatory Exams Schedule</h3>
-                <p className="text-gray-600 text-sm">The timetable for the 3rd preparatory exams for Grade 10 students has been published. Parents are requested to ensure students are well-prepared.</p>
-              </div>
-            </div>
-
-            <div className="border border-gray-200 rounded-lg p-6 hover:border-primary transition-colors flex gap-6 items-start">
-              <div className="bg-blue-50 text-center p-3 rounded-md shrink-0 w-20">
-                <div className="text-sm font-bold text-primary uppercase">May</div>
-                <div className="text-2xl font-bold text-gray-800">20</div>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Admissions Process for New Academic Year</h3>
-                <p className="text-gray-600 text-sm">Forms are now available at the school office. Limited seats available for Nursery and Grade 1. Please visit between 9 AM and 2 PM.</p>
-              </div>
-            </div>
+      {/* ─── CTA BANNER ───────────────────────────────────────────── */}
+      <section className="py-20 bg-primary relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white transform translate-x-1/3 -translate-y-1/3" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-white transform -translate-x-1/3 translate-y-1/3" />
+        </div>
+        <div className="relative max-w-3xl mx-auto px-4 text-center">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4 leading-snug">
+            Ready to Join Our School Community?
+          </h2>
+          <p className="text-blue-200 mb-10 text-lg">
+            Admissions are open for Pre-Nursery to 5th STD. Limited seats available.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/admissions" className="bg-secondary hover:bg-secondary-light text-white font-bold px-10 py-4 rounded-full transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2">
+              Apply for Admission <ArrowRight size={17} />
+            </Link>
+            <Link href="/contact" className="border-2 border-white/40 hover:border-white text-white font-semibold px-10 py-4 rounded-full transition-all inline-flex items-center justify-center">
+              Contact Us
+            </Link>
           </div>
         </div>
       </section>
+
     </div>
   );
 }

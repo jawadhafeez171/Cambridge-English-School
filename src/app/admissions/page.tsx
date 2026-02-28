@@ -89,6 +89,10 @@ export default function Admissions() {
                                 <ul className="space-y-4">
                                     <li className="flex items-start">
                                         <div className="bg-blue-50 p-1.5 rounded-full text-primary mt-0.5 mr-3 shrink-0"><CheckCircle size={16} /></div>
+                                        <span className="text-gray-700"><strong>Pre-Nursery:</strong> 2.5 years complete as on May 31st.</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="bg-blue-50 p-1.5 rounded-full text-primary mt-0.5 mr-3 shrink-0"><CheckCircle size={16} /></div>
                                         <span className="text-gray-700"><strong>Nursery:</strong> 3 years complete as on May 31st.</span>
                                     </li>
                                     <li className="flex items-start">
@@ -97,11 +101,11 @@ export default function Admissions() {
                                     </li>
                                     <li className="flex items-start">
                                         <div className="bg-blue-50 p-1.5 rounded-full text-primary mt-0.5 mr-3 shrink-0"><CheckCircle size={16} /></div>
-                                        <span className="text-gray-700"><strong>Grade 1:</strong> 6 years complete as on May 31st.</span>
+                                        <span className="text-gray-700"><strong>1st STD:</strong> 6 years complete as on May 31st.</span>
                                     </li>
                                     <li className="flex items-start">
                                         <div className="bg-blue-50 p-1.5 rounded-full text-primary mt-0.5 mr-3 shrink-0"><CheckCircle size={16} /></div>
-                                        <span className="text-gray-700"><strong>Other Grades:</strong> Based on the Transfer Certificate from the previous recognized school.</span>
+                                        <span className="text-gray-700"><strong>Other Grades up to 5th STD:</strong> Based on the Transfer Certificate from the previous recognized school.</span>
                                     </li>
                                 </ul>
                             </section>
@@ -179,18 +183,15 @@ export default function Admissions() {
                                         <label htmlFor="grade" className="block text-sm font-medium text-gray-700 mb-1">Grade Seeking <span className="text-red-500">*</span></label>
                                         <select id="grade" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none bg-white">
                                             <option value="">Select Grade</option>
+                                            <option value="pre-nursery">Pre-Nursery</option>
                                             <option value="nursery">Nursery</option>
                                             <option value="lkg">LKG</option>
                                             <option value="ukg">UKG</option>
-                                            <option value="1">Grade 1</option>
-                                            <option value="2">Grade 2</option>
-                                            <option value="3">Grade 3</option>
-                                            <option value="4">Grade 4</option>
-                                            <option value="5">Grade 5</option>
-                                            <option value="6">Grade 6</option>
-                                            <option value="7">Grade 7</option>
-                                            <option value="8">Grade 8</option>
-                                            <option value="9">Grade 9</option>
+                                            <option value="1">1st STD</option>
+                                            <option value="2">2nd STD</option>
+                                            <option value="3">3rd STD</option>
+                                            <option value="4">4th STD</option>
+                                            <option value="5">5th STD</option>
                                         </select>
                                     </div>
                                 </div>
@@ -212,6 +213,6 @@ export default function Admissions() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }

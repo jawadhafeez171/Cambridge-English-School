@@ -38,9 +38,8 @@ export default function Contact() {
                                     <div>
                                         <h3 className="text-lg font-bold text-gray-800 mb-1">Campus Address</h3>
                                         <p className="text-gray-600 leading-relaxed">
-                                            NH-48, Doddaballapura Main Rd,<br />
-                                            Dargajogihalli, Doddaballapura,<br />
-                                            Karnataka 561203
+                                            Cambridge English High School,<br />
+                                            Thyagarajanagar, Doddaballapur - 561203
                                         </p>
                                     </div>
                                 </div>
@@ -52,7 +51,6 @@ export default function Contact() {
                                     <div>
                                         <h3 className="text-lg font-bold text-gray-800 mb-1">Phone Number</h3>
                                         <p className="text-gray-600">+91 98453 32367</p>
-                                        <p className="text-gray-600">+91 80 1234 5678</p>
                                     </div>
                                 </div>
 

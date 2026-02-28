@@ -3,94 +3,110 @@ import Image from "next/image";
 import { Mail, MapPin, Phone, Facebook, Instagram, Youtube } from "lucide-react";
 
 export default function Footer() {
+    const navLinks = [
+        { name: "About Us", href: "/about" },
+        { name: "Academics", href: "/academics" },
+        { name: "Principal's Message", href: "/principal" },
+        { name: "Admissions", href: "/admissions" },
+        { name: "Facilities", href: "/facilities" },
+        { name: "Results & Achievements", href: "/results" },
+        { name: "Photo Gallery", href: "/gallery" },
+        { name: "Blog", href: "/blog" },
+        { name: "Contact", href: "/contact" },
+    ];
+
     return (
-        <footer className="bg-primary text-white pt-12 pb-8">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <footer className="bg-[#0a1847] text-white">
+            {/* Top accent bar */}
+            <div className="h-1 w-full bg-gradient-to-r from-secondary via-secondary-light to-secondary" />
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+
                     {/* School Info */}
                     <div>
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="relative w-14 h-14 bg-white rounded-full flex items-center justify-center overflow-hidden p-1">
+                        <div className="flex items-center gap-3 mb-5">
+                            <div className="relative w-12 h-12 bg-white/10 rounded-full flex items-center justify-center overflow-hidden p-1.5 shrink-0">
                                 <div className="relative w-full h-full">
                                     <Image
                                         src="/images/logo.webp"
                                         alt="Cambridge English School Logo"
                                         fill
-                                        className="object-contain"
+                                        className="object-contain filter brightness-0 invert"
                                     />
                                 </div>
                             </div>
-                            <div className="flex flex-col">
-                                <span className="font-bold text-white text-xl leading-tight">Cambridge English School</span>
-                                <span className="text-xs text-blue-200 font-medium tracking-wider">ESTD. 2005</span>
+                            <div>
+                                <p className="font-serif font-bold text-white text-lg leading-tight">Cambridge English School</p>
+                                <p className="text-secondary-light text-xs font-semibold tracking-widest uppercase mt-0.5">Estd. 2005</p>
                             </div>
                         </div>
-                        <p className="text-blue-100 text-sm mb-4 leading-relaxed">
-                            A disciplined, result-oriented State Board school offering quality English-medium education at affordable fees. Strong foundations for bright futures.
+
+                        <p className="text-blue-200/80 text-sm leading-relaxed mb-6">
+                            A disciplined, result-oriented State Board school offering quality English-medium education at affordable fees. Shaping bright futures since 2005.
                         </p>
-                        <div className="flex space-x-4">
-                            <a href="#" className="w-8 h-8 rounded-full bg-blue-800 flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Facebook">
-                                <Facebook size={16} />
-                            </a>
-                            <a href="#" className="w-8 h-8 rounded-full bg-blue-800 flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Instagram">
-                                <Instagram size={16} />
-                            </a>
-                            <a href="#" className="w-8 h-8 rounded-full bg-blue-800 flex items-center justify-center hover:bg-secondary transition-colors" aria-label="YouTube">
-                                <Youtube size={16} />
-                            </a>
+
+                        <div className="flex space-x-3">
+                            {[
+                                { Icon: Facebook, label: "Facebook" },
+                                { Icon: Instagram, label: "Instagram" },
+                                { Icon: Youtube, label: "YouTube" }
+                            ].map(({ Icon, label }) => (
+                                <a key={label} href="#" aria-label={label}
+                                    className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-blue-200 hover:bg-secondary hover:border-secondary hover:text-white transition-all">
+                                    <Icon size={15} />
+                                </a>
+                            ))}
                         </div>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4 text-secondary-light">Quick Links</h3>
-                        <ul className="space-y-2">
-                            <li><Link href="/about" className="text-blue-100 hover:text-white transition-colors text-sm">About Us</Link></li>
-                            <li><Link href="/principal" className="text-blue-100 hover:text-white transition-colors text-sm">Principal&apos;s Message</Link></li>
-                            <li><Link href="/academics" className="text-blue-100 hover:text-white transition-colors text-sm">Academics</Link></li>
-                            <li><Link href="/admissions" className="text-blue-100 hover:text-white transition-colors text-sm">Admissions</Link></li>
-                            <li><Link href="/facilities" className="text-blue-100 hover:text-white transition-colors text-sm">Facilities</Link></li>
-                            <li><Link href="/results" className="text-blue-100 hover:text-white transition-colors text-sm">Results & Achievements</Link></li>
-                            <li><Link href="/gallery" className="text-blue-100 hover:text-white transition-colors text-sm">Photo Gallery</Link></li>
-                            <li><Link href="/blog" className="text-blue-100 hover:text-white transition-colors text-sm">Blog</Link></li>
+                        <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-secondary-light mb-5">Quick Links</h3>
+                        <ul className="space-y-2.5">
+                            {navLinks.map((link) => (
+                                <li key={link.name}>
+                                    <Link href={link.href}
+                                        className="text-blue-200/80 hover:text-white text-sm transition-colors flex items-center gap-2 group">
+                                        <span className="w-3 h-[1px] bg-secondary/50 group-hover:bg-secondary group-hover:w-4 transition-all" />
+                                        {link.name}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     {/* Contact Details */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4 text-secondary-light">Contact Us</h3>
-                        <ul className="space-y-4">
-                            <li className="flex items-start">
-                                <MapPin size={20} className="mr-3 text-secondary-light shrink-0 mt-0.5" />
-                                <span className="text-blue-100 text-sm leading-relaxed">
-                                    NH-48, Doddaballapura Main Rd,<br />
-                                    Dargajogihalli, Doddaballapura,<br />
-                                    Karnataka 561203
+                        <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-secondary-light mb-5">Contact Us</h3>
+                        <ul className="space-y-5">
+                            <li className="flex items-start gap-3">
+                                <MapPin size={17} className="text-secondary shrink-0 mt-0.5" />
+                                <span className="text-blue-200/80 text-sm leading-relaxed">
+                                    Cambridge English High School,<br />
+                                    Thyagarajanagar, Doddaballapur - 561203
                                 </span>
                             </li>
-                            <li className="flex items-center">
-                                <Phone size={20} className="mr-3 text-secondary-light shrink-0" />
-                                <span className="text-blue-100 text-sm">
+                            <li className="flex items-center gap-3">
+                                <Phone size={17} className="text-secondary shrink-0" />
+                                <a href="tel:+919845332367" className="text-blue-200/80 hover:text-white text-sm transition-colors">
                                     +91 98453 32367
-                                </span>
+                                </a>
                             </li>
-                            <li className="flex items-center">
-                                <Mail size={20} className="mr-3 text-secondary-light shrink-0" />
-                                <span className="text-blue-100 text-sm">
+                            <li className="flex items-center gap-3">
+                                <Mail size={17} className="text-secondary shrink-0" />
+                                <a href="mailto:principalcehs@gmail.com" className="text-blue-200/80 hover:text-white text-sm transition-colors">
                                     principalcehs@gmail.com
-                                </span>
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div className="border-t border-blue-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
-                    <p className="text-blue-200 text-sm mb-4 md:mb-0">
-                        &copy; {new Date().getFullYear()} Cambridge English School. All rights reserved.
-                    </p>
-                    <p className="text-blue-200 text-xs">
-                        Affiliated to Karnataka State Board
-                    </p>
+                {/* Bottom Bar */}
+                <div className="border-t border-white/10 mt-12 pt-7 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-blue-300/60">
+                    <p>&copy; {new Date().getFullYear()} Cambridge English School. All rights reserved.</p>
+                    <p>Affiliated to Karnataka State Board &bull; Designed by <a href="https://hafeezstudio.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">HafeezStudio</a></p>
                 </div>
             </div>
         </footer>

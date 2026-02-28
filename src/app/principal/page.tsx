@@ -4,7 +4,7 @@ import { Quote } from "lucide-react";
 
 export const metadata = {
     title: "Principal's Message | Cambridge English School",
-    description: "Read the inspiring message from Miss Seema Yasmeen, Principal of Cambridge English School, Doddaballapur.",
+    description: "Read the inspiring message from Mrs. Seema Yasmin, Principal of Cambridge English School, Doddaballapur.",
 };
 
 export default function PrincipalMessage() {
@@ -30,7 +30,7 @@ export default function PrincipalMessage() {
                             <div className="lg:w-2/5 relative h-[400px] lg:h-auto bg-gray-100">
                                 <Image
                                     src="/images/principal-message.webp"
-                                    alt="Miss Seema Yasmeen - Principal"
+                                    alt="Mrs. Seema Yasmin - Principal"
                                     fill
                                     className="object-cover object-top"
                                     priority
@@ -42,7 +42,7 @@ export default function PrincipalMessage() {
                                 <Quote size={80} className="absolute top-6 left-6 text-blue-50 opacity-50 z-0" />
 
                                 <div className="relative z-10">
-                                    <h2 className="text-3xl font-bold text-gray-800 mb-2 font-serif">Miss Seema Yasmeen</h2>
+                                    <h2 className="text-3xl font-bold text-gray-800 mb-2 font-serif">Mrs. Seema Yasmin</h2>
                                     <p className="text-primary font-bold mb-8 tracking-wider uppercase text-sm">Principal, Cambridge English School</p>
 
                                     <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
@@ -56,7 +56,7 @@ export default function PrincipalMessage() {
                                             Education is not merely about accumulating facts; it is about preparing a child for life. Our philosophy revolves around building a strong academic foundation while simultaneously instilling deep-rooted moral values. We believe that true success comes from a harmonious blend of knowledge, character, and discipline.
                                         </p>
                                         <p>
-                                            Our consistent 100% pass rate in the SSLC board examinations over the past 5 years is a testament to the rigorous, result-oriented approach of our dedicated faculty. But beyond the marks, we are proud of the well-rounded global citizens our students become. We emphasize strong English communication, critical thinking, and a profound sense of responsibility.
+                                            Our consistent 100% result in the SSLC board examinations over the past 10 years is a testament to the rigorous, result-oriented approach of our dedicated faculty. But beyond the marks, we are proud of the well-rounded global citizens our students become. We emphasize strong English communication, critical thinking, and a profound sense of responsibility.
                                         </p>
                                         <p>
                                             As we look to the future, we remain steadfast in our commitment to providing affordable, premium education that transforms lives. I invite you to join our community and partner with us in shaping bright futures.
@@ -76,7 +76,7 @@ export default function PrincipalMessage() {
                                             />
                                         </div>
                                         <div>
-                                            <p className="font-bold text-gray-800 font-serif text-xl">Miss Seema Yasmeen</p>
+                                            <p className="font-bold text-gray-800 font-serif text-xl">Mrs. Seema Yasmin</p>
                                             <p className="text-sm text-gray-500 font-medium">Principal</p>
                                         </div>
                                     </div>
