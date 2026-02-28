@@ -119,11 +119,11 @@ export default function About() {
 
                     <div className="relative pl-8 border-l-2 border-white/10 space-y-12">
                         {[
-                            { year: "2005", title: "Inception", desc: "Started with 30 students in Nursery to Grade 3, aiming to provide quality English education to Doddaballapur." },
-                            { year: "2010", title: "State Board Affiliation", desc: "Officially recognized by the Department of Public Instruction for Grades 1 to 10." },
-                            { year: "2012", title: "First SSLC Batch", desc: "Our first 10th-grade batch achieved a 100% pass result, setting a benchmark for years to come." },
-                            { year: "2020", title: "Digital Infrastructure", desc: "Upgraded with AI-model digital classrooms equipped with smart TVs and Tabs." },
-                            { year: "2025", title: "Excellence Continued", desc: "Over 800+ students and consistently producing district toppers every single year." },
+                            { year: "2002–03", title: "Inception", desc: "School received permission and started with Nursery to 1st Grade with just 22 students — a humble beginning with a bold vision for quality English education in Doddaballapur." },
+                            { year: "Early Years", title: "Computer Class", desc: "Computer education was introduced from the very beginning, giving students a head-start in digital literacy long before it became common in local schools." },
+                            { year: "2014", title: "High School Section", desc: "The school expanded to include the High School section (Grades 8–10), completing the full primary-to-secondary educational journey under one roof." },
+                            { year: "2015", title: "First SSLC Batch", desc: "Our first 10th-grade batch appeared for the Karnataka State Board SSLC examinations and achieved a remarkable 100% pass result — a benchmark we have upheld ever since." },
+                            { year: "2025–26", title: "AI Model Digital Classrooms", desc: "Upgraded classrooms with AI-model digital infrastructure, equipping each classroom with Smart TVs and Tabs for an interactive, modern learning experience." },
                         ].map(({ year, title, desc }) => (
                             <div key={year} className="relative">
                                 <div className="absolute -left-[2.35rem] w-4 h-4 rounded-full bg-secondary border-4 border-[#0a1847]" />

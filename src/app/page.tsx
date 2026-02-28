@@ -24,7 +24,7 @@ export default function Home() {
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-6 fade-in">
               <span className="h-[2px] w-10 bg-secondary" />
-              <span className="text-secondary font-semibold text-xs tracking-[0.2em] uppercase">Doddaballapur · Est. 2005</span>
+              <span className="text-secondary font-semibold text-xs tracking-[0.2em] uppercase">Doddaballapur · Est. 2002</span>
             </div>
 
             {/* Headline */}
@@ -81,7 +81,7 @@ export default function Home() {
               { Icon: CheckCircle, title: "Admissions Open", body: "Pre-Nursery to 5th STD seats available for the upcoming academic year.", color: "text-blue-600 bg-blue-50" },
               { Icon: BookOpen, title: "State Board Curriculum", body: "Rigorous adherence to Karnataka State Board — core concepts, deeply mastered.", color: "text-indigo-600 bg-indigo-50" },
               { Icon: Award, title: "100% Results (10 yrs)", body: "An unbroken track record of 100% pass results in SSLC board examinations.", color: "text-amber-600 bg-amber-50" },
-              { Icon: Monitor, title: "AI Digital Classrooms", body: "Modern learning with AI-model digital classrooms equipped with TVs and Tabs.", color: "text-emerald-600 bg-emerald-50" },
+              { Icon: Monitor, title: "AI Digital Classrooms", body: "AI-model digital classrooms with Smart TVs and Tabs, introduced in 2025–26.", color: "text-emerald-600 bg-emerald-50" },
             ].map(({ Icon, title, body, color }) => (
               <div key={title} className="bg-white rounded-2xl p-7 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-border-light group">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${color} transition-transform group-hover:scale-110`}>
@@ -111,7 +111,7 @@ export default function Home() {
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-6 -right-6 bg-primary text-white rounded-2xl p-6 shadow-xl hidden md:block">
-                <div className="font-serif text-4xl font-bold text-secondary-light">20+</div>
+                <div className="font-serif text-4xl font-bold text-secondary-light">22+</div>
                 <div className="text-xs text-blue-200 font-medium tracking-wide mt-1 uppercase">Years of<br />Excellence</div>
               </div>
               <div className="absolute -top-5 -left-5 w-24 h-24 bg-secondary/10 rounded-2xl -z-10 hidden md:block" />
@@ -125,10 +125,10 @@ export default function Home() {
                 <span className="italic text-secondary">Doddaballapur</span>
               </h2>
               <p className="text-gray-600 mb-4 leading-relaxed text-lg">
-                Located in the heart of Doddaballapur, Cambridge English School is dedicated to providing high-quality, English-medium education accessible to all.
+                Founded in 2002, Cambridge English School has grown from a humble start of 22 students to one of Doddaballapur&apos;s most trusted English-medium institutions.
               </p>
               <p className="text-gray-500 mb-8 leading-relaxed">
-                Our approach is deeply structured and result-oriented, ensuring every student develops a robust academic foundation. We focus on discipline, integrity, respect, and preparing students rigorously for academic success.
+                Our deeply structured, result-oriented approach has produced a consistent 100% SSLC pass rate since our first batch in 2015. We focus on discipline, integrity, and rigorous academic preparation.
               </p>
               <Link href="/about" className="inline-flex items-center font-semibold text-primary hover:text-primary-light transition-colors group gap-2">
                 Read our full story
@@ -145,7 +145,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
               { num: "100%", label: "SSLC Pass Rate" },
-              { num: "20+", label: "Years of Excellence" },
+              { num: "22+", label: "Years of Excellence" },
               { num: "30:1", label: "Student-Teacher Ratio" },
               { num: "50+", label: "District Toppers" },
             ].map(({ num, label }) => (
@@ -185,6 +185,63 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── PHOTO COLLAGE ─────────────────────────────────────────── */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-secondary font-semibold text-xs tracking-[0.18em] uppercase mb-3">Campus Life</p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary">Moments at Cambridge</h2>
+            <p className="text-gray-500 mt-3 max-w-xl mx-auto">A glimpse into the vibrant daily life of our students on campus.</p>
+          </div>
+
+          {/* Mosaic Collage Grid */}
+          <div className="grid grid-cols-4 grid-rows-3 gap-3 h-[520px] md:h-[600px]">
+            {/* Large left image */}
+            <div className="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group">
+              <Image src="/images/gallery/gallery-32.webp" alt="School event" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            </div>
+            {/* Top right small */}
+            <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group">
+              <Image src="/images/gallery/gallery-40.webp" alt="School event" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            {/* Top far right small */}
+            <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group">
+              <Image src="/images/gallery/gallery-55.webp" alt="School event" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            {/* Middle right small */}
+            <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group">
+              <Image src="/images/gallery/gallery-67.webp" alt="School event" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            {/* Middle far right small */}
+            <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group">
+              <Image src="/images/gallery/gallery-78.webp" alt="School event" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            {/* Bottom row: 3 wide images */}
+            <div className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group">
+              <Image src="/images/gallery/gallery-90.webp" alt="School event" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group">
+              <Image src="/images/gallery/gallery-98.webp" alt="School event" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            {/* Last tile — "See all" overlay */}
+            <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group">
+              <Image src="/images/gallery/gallery-108.webp" alt="View all photos" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Link href="/gallery" className="absolute inset-0 bg-primary/75 flex flex-col items-center justify-center text-white hover:bg-primary/90 transition-colors">
+                <span className="font-serif text-2xl font-bold">108+</span>
+                <span className="text-xs mt-1 font-semibold uppercase tracking-wider opacity-90">View All</span>
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <Link href="/gallery" className="inline-flex items-center gap-2 text-primary hover:text-primary-light font-semibold transition-colors">
+              Browse Full Gallery <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>

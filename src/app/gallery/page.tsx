@@ -5,8 +5,9 @@ import Image from "next/image";
 import { Maximize2, ImageIcon } from "lucide-react";
 
 // The total images and static IDs
-const totalImages = 31;
+const totalImages = 108;
 const awardImages = [1, 2, 8, 15, 22];
+const newBatchStart = 32; // gallery-32 onwards are from gallery 2
 
 const galleryImages = Array.from({ length: totalImages }, (_, i) => {
     const id = i + 1;
@@ -16,6 +17,11 @@ const galleryImages = Array.from({ length: totalImages }, (_, i) => {
     if (awardImages.includes(id)) {
         category = "Awards & Achievements";
         title = "Prathiba Karanji & School Awards";
+    }
+
+    if (id >= newBatchStart) {
+        category = "School Events";
+        title = `School Event ${id - newBatchStart + 1}`;
     }
 
     return {
@@ -28,21 +34,29 @@ const galleryImages = Array.from({ length: totalImages }, (_, i) => {
 
 export default function Gallery() {
     const [activeCategory, setActiveCategory] = useState("All");
-    const categories = ["All", "Awards & Achievements", "Campus Life"];
+    const categories = ["All", "Campus Life", "School Events", "Awards & Achievements"];
 
     const filteredImages = activeCategory === "All"
         ? galleryImages
         : galleryImages.filter(img => img.category === activeCategory);
 
+    const counts: Record<string, number> = { All: galleryImages.length };
+    categories.slice(1).forEach(c => {
+        counts[c] = galleryImages.filter(img => img.category === c).length;
+    });
+
     return (
         <div className="flex flex-col min-h-screen bg-gray-50">
             {/* Page Header */}
-            <section className="relative bg-gradient-to-r from-primary via-blue-900 to-primary-light text-white py-16 md:py-24 overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/images/gallery/gallery-6.webp')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">Photo Gallery</h1>
-                    <p className="text-blue-100 max-w-2xl mx-auto text-lg">
-                        Glimpses of academic excellence, extracurricular vibrancy, and campus life.
+            <section className="relative bg-primary text-white py-20 md:py-28 overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/images/gallery/gallery-6.webp')] bg-cover bg-center opacity-10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary-light/80" />
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                    <p className="text-secondary-light font-semibold text-xs tracking-[0.2em] uppercase mb-4">Our Moments</p>
+                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Photo Gallery</h1>
+                    <div className="h-[2px] w-16 bg-secondary mx-auto mb-6" />
+                    <p className="text-blue-100/80 max-w-xl mx-auto text-lg">
+                        Snapshots of student life, campus activities, and school events.
                     </p>
                 </div>
             </section>
@@ -52,17 +66,20 @@ export default function Gallery() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                     {/* Category Filter */}
-                    <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
+                    <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-12">
                         {categories.map((category) => (
                             <button
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
-                                className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${activeCategory === category
-                                    ? "bg-secondary text-white shadow-md"
-                                    : "bg-white text-gray-700 border border-gray-200 hover:border-secondary hover:text-secondary"
+                                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all flex items-center gap-2 ${activeCategory === category
+                                        ? "bg-primary text-white shadow-md"
+                                        : "bg-white text-gray-700 border border-border-light hover:border-primary hover:text-primary"
                                     }`}
                             >
                                 {category}
+                                <span className={`text-xs px-1.5 py-0.5 rounded-full font-bold ${activeCategory === category ? "bg-white/20" : "bg-gray-100 text-gray-500"}`}>
+                                    {counts[category] ?? 0}
+                                </span>
                             </button>
                         ))}
                     </div>
