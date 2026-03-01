@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Monitor, FlaskConical, BookOpen, Users, Bus, Trophy } from "lucide-react";
+import { Monitor, FlaskConical, BookOpen, Trophy } from "lucide-react";
 
 export const metadata = {
     title: "School Facilities | Cambridge English School Doddaballapur",
@@ -8,12 +8,12 @@ export const metadata = {
 
 export default function Facilities() {
     const facilities = [
-        { title: "AI Digital Classrooms", description: "AI-model digital classrooms with Smart TVs and Tabs, introduced in the 2025–26 academic year for an engaging and modern learning experience.", icon: Monitor, image: "/images/gallery/gallery-3.webp", accent: "text-indigo-600 bg-indigo-50" },
+        { title: "AI Digital Classrooms", description: "AI-model digital classrooms with Smart TVs and Tabs, introduced in the 2025–26 academic year for an engaging and modern learning experience.", icon: Monitor, image: "/images/classroom-1.webp", accent: "text-indigo-600 bg-indigo-50" },
+        { title: "Smart Classrooms", description: "Well-lit, spacious classrooms equipped with modern learning tools — designed to keep students focused, comfortable, and engaged throughout the day.", icon: Monitor, image: "/images/classroom-2.webp", accent: "text-violet-600 bg-violet-50" },
         { title: "Science Laboratory", description: "Fully equipped with modern apparatus to ensure students practically understand Physics, Chemistry, and Biology through hands-on experiments.", icon: FlaskConical, image: "/images/gallery/gallery-24.webp", accent: "text-amber-600 bg-amber-50" },
         { title: "Computer Lab", description: "Computer education has been a pillar of Cambridge English School since its very beginning — giving students a head-start in digital literacy, coding basics, and research skills.", icon: Monitor, image: "/images/gallery/gallery-12.webp", accent: "text-blue-600 bg-blue-50" },
         { title: "School Library", description: "A quiet sanctuary housing thousands of books — from academic references to classic literature — fostering a genuine love for reading.", icon: BookOpen, image: "/images/gallery/gallery-9.webp", accent: "text-emerald-700 bg-emerald-50" },
         { title: "Playground & Sports", description: "A large, safe playground for daily physical training, annual sports meets, and team games like Volleyball, Kho-kho, and Kabaddi.", icon: Trophy, image: "/images/gallery/gallery-11.webp", accent: "text-orange-600 bg-orange-50" },
-        { title: "Transportation", description: "Safe and reliable bus facility covering all major routes in Doddaballapur and surrounding areas for secure student transit.", icon: Bus, image: "/images/gallery/gallery-13.webp", accent: "text-slate-600 bg-slate-50" },
     ];
 
     return (

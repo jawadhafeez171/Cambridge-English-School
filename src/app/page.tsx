@@ -29,12 +29,13 @@ export default function Home() {
 
             {/* Headline */}
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 fade-in-up text-shadow">
-              Strong Foundations.<br />
-              <span className="text-secondary-light italic">Bright Futures.</span>
+              Where Every Child<br />
+              <span className="text-secondary-light italic">Learns to Excel.</span>
             </h1>
 
             <p className="text-blue-100/90 text-lg md:text-xl mb-10 leading-relaxed max-w-xl fade-in-up">
-              A disciplined, result-oriented State Board school offering quality English‑medium education at affordable fees in Doddaballapur.
+              Doddaballapur&apos;s trusted English‑medium school — 23 years of 100% SSLC results,
+              dedicated teachers, and values-based education from Pre‑Nursery to 10th Grade.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 fade-in-up">
@@ -42,8 +43,8 @@ export default function Home() {
                 Apply for Admission
                 <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link href="/contact" className="inline-flex items-center justify-center border-2 border-white/60 hover:border-white text-white font-semibold px-8 py-4 rounded-full transition-all hover:bg-white/10">
-                Book Campus Visit
+              <Link href="/about" className="inline-flex items-center justify-center border-2 border-white/60 hover:border-white text-white font-semibold px-8 py-4 rounded-full transition-all hover:bg-white/10">
+                Our Story
               </Link>
             </div>
           </div>
@@ -55,7 +56,7 @@ export default function Home() {
             <div className="bg-white/95 backdrop-blur-sm rounded-t-2xl shadow-2xl grid grid-cols-2 md:grid-cols-4 divide-y divide-gray-100 md:divide-y-0 md:divide-x">
               {[
                 { num: "100%", label: "SSLC Results (10 yrs)" },
-                { num: "22+", label: "Years of Excellence" },
+                { num: "23+", label: "Years of Excellence" },
                 { num: "800+", label: "Students Enrolled" },
                 { num: "50+", label: "District Toppers" },
               ].map(({ num, label }, i) => (
@@ -96,12 +97,12 @@ export default function Home() {
       </section>
 
       {/* ─── ABOUT SECTION ────────────────────────────────────────── */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 items-center">
             {/* Image side */}
-            <div className="lg:w-1/2 relative">
-              <div className="relative h-[480px] w-full rounded-2xl overflow-hidden shadow-2xl">
+            <div className="lg:w-1/2 relative w-full">
+              <div className="relative h-56 sm:h-72 lg:h-[480px] w-full rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/gallery/gallery-24.webp"
                   alt="School Campus"
@@ -111,7 +112,7 @@ export default function Home() {
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-6 -right-6 bg-primary text-white rounded-2xl p-6 shadow-xl hidden md:block">
-                <div className="font-serif text-4xl font-bold text-secondary-light">22+</div>
+                <div className="font-serif text-4xl font-bold text-secondary-light">23+</div>
                 <div className="text-xs text-blue-200 font-medium tracking-wide mt-1 uppercase">Years of<br />Excellence</div>
               </div>
               <div className="absolute -top-5 -left-5 w-24 h-24 bg-secondary/10 rounded-2xl -z-10 hidden md:block" />
@@ -145,7 +146,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
               { num: "100%", label: "SSLC Pass Rate" },
-              { num: "22+", label: "Years of Excellence" },
+              { num: "23+", label: "Years of Excellence" },
               { num: "30:1", label: "Student-Teacher Ratio" },
               { num: "50+", label: "District Toppers" },
             ].map(({ num, label }) => (

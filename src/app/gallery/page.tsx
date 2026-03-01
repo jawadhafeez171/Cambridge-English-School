@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Maximize2, ImageIcon } from "lucide-react";
 
 // The total images and static IDs
-const totalImages = 108;
+const totalImages = 110;
 const awardImages = [1, 2, 8, 15, 22];
 const newBatchStart = 32; // gallery-32 onwards are from gallery 2
 
@@ -72,8 +72,8 @@ export default function Gallery() {
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
                                 className={`px-5 py-2 rounded-full text-sm font-semibold transition-all flex items-center gap-2 ${activeCategory === category
-                                        ? "bg-primary text-white shadow-md"
-                                        : "bg-white text-gray-700 border border-border-light hover:border-primary hover:text-primary"
+                                    ? "bg-primary text-white shadow-md"
+                                    : "bg-white text-gray-700 border border-border-light hover:border-primary hover:text-primary"
                                     }`}
                             >
                                 {category}
