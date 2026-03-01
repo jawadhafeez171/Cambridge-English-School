@@ -52,16 +52,16 @@ export default function Home() {
         {/* Floating Stats Bar */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
           <div className="max-w-4xl mx-auto px-6">
-            <div className="bg-white/95 backdrop-blur-sm rounded-t-2xl shadow-2xl grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-100">
+            <div className="bg-white/95 backdrop-blur-sm rounded-t-2xl shadow-2xl grid grid-cols-2 md:grid-cols-4 divide-y divide-gray-100 md:divide-y-0 md:divide-x">
               {[
                 { num: "100%", label: "SSLC Results (10 yrs)" },
-                { num: "20+", label: "Years of Excellence" },
+                { num: "22+", label: "Years of Excellence" },
                 { num: "800+", label: "Students Enrolled" },
                 { num: "50+", label: "District Toppers" },
-              ].map(({ num, label }) => (
-                <div key={label} className="py-5 px-6 text-center">
-                  <div className="text-2xl md:text-3xl font-serif font-bold text-primary">{num}</div>
-                  <div className="text-xs text-gray-500 font-medium mt-1">{label}</div>
+              ].map(({ num, label }, i) => (
+                <div key={label} className={`py-4 px-4 text-center ${i % 2 === 0 ? "border-r border-gray-100" : ""} ${i < 2 ? "md:border-r-0" : ""}`}>
+                  <div className="text-xl md:text-3xl font-serif font-bold text-primary">{num}</div>
+                  <div className="text-[11px] text-gray-500 font-medium mt-1 leading-tight">{label}</div>
                 </div>
               ))}
             </div>
@@ -198,37 +198,47 @@ export default function Home() {
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">A glimpse into the vibrant daily life of our students on campus.</p>
           </div>
 
-          {/* Mosaic Collage Grid */}
-          <div className="grid grid-cols-4 grid-rows-3 gap-3 h-[520px] md:h-[600px]">
+          {/* Mobile: simple 2-col grid. Desktop: mosaic layout */}
+          <div className="md:hidden grid grid-cols-2 gap-3">
+            {[
+              "/images/gallery/gallery-32.webp",
+              "/images/gallery/gallery-40.webp",
+              "/images/gallery/gallery-55.webp",
+              "/images/gallery/gallery-67.webp",
+              "/images/gallery/gallery-78.webp",
+              "/images/gallery/gallery-90.webp",
+            ].map((src, i) => (
+              <div key={i} className="relative rounded-xl overflow-hidden aspect-square">
+                <Image src={src} alt="School event" fill className="object-cover" />
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: full mosaic */}
+          <div className="hidden md:grid grid-cols-4 grid-rows-3 gap-3 h-[600px]">
             {/* Large left image */}
             <div className="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group">
               <Image src="/images/gallery/gallery-32.webp" alt="School event" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
-            {/* Top right small */}
             <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group">
               <Image src="/images/gallery/gallery-40.webp" alt="School event" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
-            {/* Top far right small */}
             <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group">
               <Image src="/images/gallery/gallery-55.webp" alt="School event" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
-            {/* Middle right small */}
             <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group">
               <Image src="/images/gallery/gallery-67.webp" alt="School event" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
-            {/* Middle far right small */}
             <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group">
               <Image src="/images/gallery/gallery-78.webp" alt="School event" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
-            {/* Bottom row: 3 wide images */}
             <div className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden group">
               <Image src="/images/gallery/gallery-90.webp" alt="School event" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
             <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group">
               <Image src="/images/gallery/gallery-98.webp" alt="School event" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
-            {/* Last tile — "See all" overlay */}
             <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group">
               <Image src="/images/gallery/gallery-108.webp" alt="View all photos" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <Link href="/gallery" className="absolute inset-0 bg-primary/75 flex flex-col items-center justify-center text-white hover:bg-primary/90 transition-colors">

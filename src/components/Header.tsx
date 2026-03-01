@@ -32,9 +32,9 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20 md:h-[88px]">
                     {/* Logo / School Name */}
-                    <div className="flex-shrink-0 flex items-center">
-                        <Link href="/" className="flex items-center gap-3 group">
-                            <div className="relative w-14 h-14 md:w-16 md:h-16 flex items-center justify-center overflow-hidden">
+                    <div className="flex-shrink-0 flex items-center min-w-0">
+                        <Link href="/" className="flex items-center gap-2 group min-w-0">
+                            <div className="relative w-11 h-11 md:w-14 md:h-14 flex items-center justify-center overflow-hidden shrink-0">
                                 <Image
                                     src="/images/logo.webp"
                                     alt="Cambridge English School Logo"
@@ -43,9 +43,13 @@ export default function Header() {
                                     priority
                                 />
                             </div>
-                            <div className="flex flex-col justify-center">
-                                <span className="font-serif font-bold text-primary text-base lg:text-lg xl:text-xl leading-tight tracking-wide whitespace-nowrap">Cambridge English School</span>
-                                <span className="text-[9px] lg:text-[10px] text-secondary font-semibold uppercase tracking-[0.18em] mt-0.5">Thyagarajanagar, Doddaballapur</span>
+                            <div className="flex flex-col justify-center min-w-0">
+                                <span className="font-serif font-bold text-primary text-sm md:text-base lg:text-lg leading-tight tracking-wide">
+                                    Cambridge English School
+                                </span>
+                                <span className="hidden sm:block text-[9px] lg:text-[10px] text-secondary font-semibold uppercase tracking-[0.18em] mt-0.5">
+                                    Thyagarajanagar, Doddaballapur
+                                </span>
                             </div>
                         </Link>
                     </div>
