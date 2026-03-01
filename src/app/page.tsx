@@ -34,7 +34,7 @@ export default function Home() {
             </h1>
 
             <p className="text-blue-100/90 text-lg md:text-xl mb-10 leading-relaxed max-w-xl fade-in-up">
-              Doddaballapur&apos;s trusted English‑medium school — 23 years of 100% SSLC results,
+              Doddaballapur&apos;s trusted English‑medium school — 10+ years of 100% SSLC results,
               dedicated teachers, and values-based education from Pre‑Nursery to 10th Grade.
             </p>
 
