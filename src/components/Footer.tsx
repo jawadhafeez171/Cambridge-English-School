@@ -6,12 +6,13 @@ export default function Footer() {
     const navLinks = [
         { name: "About Us", href: "/about" },
         { name: "Academics", href: "/academics" },
+        { name: "Student Life", href: "/student-life" },
         { name: "Principal's Message", href: "/principal" },
         { name: "Admissions", href: "/admissions" },
-        { name: "Facilities", href: "/facilities" },
         { name: "Results & Achievements", href: "/results" },
         { name: "Photo Gallery", href: "/gallery" },
-        { name: "Blog", href: "/blog" },
+        { name: "School Rules", href: "/school-rules" },
+        { name: "Anti-Ragging Policy", href: "/anti-ragging" },
         { name: "Contact", href: "/contact" },
     ];
 
@@ -105,7 +106,7 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="border-t border-white/10 mt-12 pt-7 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-blue-300/60">
                     <p>&copy; {new Date().getFullYear()} Cambridge English School. All rights reserved.</p>
-                    <p>Affiliated to Karnataka State Board &bull; Designed by <a href="https://hafeezstudio.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">HafeezStudio</a></p>
+                    <p>Affiliated to Karnataka State Board &bull; Designed by <a href="https://hafeezstudio.com" target="_blank" rel="noopener noreferrer" className="text-blue-200/90 font-semibold hover:text-white transition-colors">HafeezStudio</a></p>
                 </div>
             </div>
         </footer>

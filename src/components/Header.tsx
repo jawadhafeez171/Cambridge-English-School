@@ -21,9 +21,9 @@ export default function Header() {
         { name: "Home", href: "/" },
         { name: "About Us", href: "/about" },
         { name: "Academics", href: "/academics" },
-        { name: "Principal", href: "/principal" },
+        { name: "Student Life", href: "/student-life" },
         { name: "Gallery", href: "/gallery" },
-        { name: "Facilities", href: "/facilities" },
+        { name: "School Rules", href: "/school-rules" },
         { name: "Contact", href: "/contact" },
     ];
 

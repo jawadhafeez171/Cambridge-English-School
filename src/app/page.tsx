@@ -131,10 +131,16 @@ export default function Home() {
               <p className="text-gray-500 mb-8 leading-relaxed">
                 Our deeply structured, result-oriented approach has produced a consistent 100% SSLC pass rate since our first batch in 2015. We focus on discipline, integrity, and rigorous academic preparation.
               </p>
-              <Link href="/about" className="inline-flex items-center font-semibold text-primary hover:text-primary-light transition-colors group gap-2">
-                Read our full story
-                <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
+              <div className="flex flex-wrap items-center gap-6">
+                <Link href="/about" className="inline-flex items-center font-semibold text-primary hover:text-primary-light transition-colors group gap-2">
+                  Read our full story
+                  <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link href="/principal" className="inline-flex items-center font-semibold text-secondary hover:text-secondary-light transition-colors group gap-2 border-l border-gray-200 pl-6">
+                  Principal&apos;s Message
+                  <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
