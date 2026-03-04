@@ -3,8 +3,10 @@ import Link from "next/link";
 import { Heart, Music, Trophy, Palette, BookOpen, Users } from "lucide-react";
 
 export const metadata = {
-    title: "Student Life | Cambridge English School Doddaballapur",
+    title: "Student Life",
     description: "Explore the vibrant student life at Cambridge English School — sports, arts, events, and a nurturing campus community.",
+    alternates: { canonical: "/student-life" },
+    openGraph: { url: "/student-life" },
 };
 
 const activities = [

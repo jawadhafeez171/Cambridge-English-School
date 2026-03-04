@@ -3,8 +3,10 @@ import Link from "next/link";
 import { Calendar, User, ArrowRight } from "lucide-react";
 
 export const metadata = {
-    title: "School Blog & News | Cambridge English School Doddaballapur",
+    title: "School Blog & News",
     description: "Read the latest news, educational articles, and announcements from Cambridge English School.",
+    alternates: { canonical: "/blog" },
+    openGraph: { url: "/blog" },
 };
 
 export default function Blog() {

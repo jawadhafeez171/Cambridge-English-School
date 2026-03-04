@@ -2,8 +2,10 @@ import Image from "next/image";
 import { Monitor, FlaskConical, BookOpen, Trophy } from "lucide-react";
 
 export const metadata = {
-    title: "School Facilities | Cambridge English School Doddaballapur",
+    title: "School Facilities",
     description: "Explore the facilities at Cambridge English School, including AI digital classrooms, science lab, library, and sports infrastructure.",
+    alternates: { canonical: "/facilities" },
+    openGraph: { url: "/facilities" },
 };
 
 export default function Facilities() {

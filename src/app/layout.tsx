@@ -19,9 +19,38 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Cambridge English School | Doddaballapur",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://cambridgeenglishschool.com"),
+  title: {
+    default: "Cambridge English School | Doddaballapur",
+    template: "%s | Cambridge English School",
+  },
   description: "A disciplined, result-oriented State Board school offering quality English-medium education at affordable fees in Doddaballapur, Karnataka.",
-  keywords: ["Best State Board School in Doddaballapur", "English Medium School in Doddaballapur", "SSLC School in Doddaballapur"],
+  keywords: ["Best State Board School in Doddaballapur", "English Medium School in Doddaballapur", "SSLC School in Doddaballapur", "Education in Doddaballapur"],
+  openGraph: {
+    title: "Cambridge English School | Doddaballapur",
+    description: "A disciplined, result-oriented State Board school offering quality English-medium education at affordable fees in Doddaballapur, Karnataka.",
+    url: "/",
+    siteName: "Cambridge English School",
+    images: [
+      {
+        url: "/images/School.webp",
+        width: 1200,
+        height: 630,
+        alt: "Cambridge English School Campus",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cambridge English School | Doddaballapur",
+    description: "A disciplined, result-oriented State Board school offering quality English-medium education at affordable fees in Doddaballapur, Karnataka.",
+    images: ["/images/School.webp"],
+  },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({

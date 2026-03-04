@@ -3,8 +3,10 @@ import Link from "next/link";
 import { Target, Compass, BookOpen, Shield, HeartHandshake, Award } from "lucide-react";
 
 export const metadata = {
-    title: "About Us | Cambridge English School Doddaballapur",
+    title: "About Us",
     description: "Learn about Cambridge English School's history, vision, mission, and the core values that drive our commitment to excellence.",
+    alternates: { canonical: "/about" },
+    openGraph: { url: "/about" },
 };
 
 export default function About() {

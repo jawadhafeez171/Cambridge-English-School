@@ -2,8 +2,10 @@ import { FileText, ClipboardList, CheckCircle, Download, HelpCircle, FileCheck, 
 import Link from "next/link";
 
 export const metadata = {
-    title: "Admissions & Fees | Cambridge English School Doddaballapur",
+    title: "Admissions & Fees",
     description: "Learn about the admission process, eligibility criteria, required documents, and our affordable fee structure.",
+    alternates: { canonical: "/admissions" },
+    openGraph: { url: "/admissions" },
 };
 
 export default function Admissions() {

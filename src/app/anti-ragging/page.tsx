@@ -2,8 +2,10 @@ import { ShieldCheck, Phone, Mail, AlertOctagon, Heart, BookOpen } from "lucide-
 import Link from "next/link";
 
 export const metadata = {
-    title: "Anti-Ragging Policy | Cambridge English School Doddaballapur",
+    title: "Anti-Ragging Policy",
     description: "Cambridge English School's strict anti-ragging and anti-bullying policy to ensure a safe and respectful campus for all students.",
+    alternates: { canonical: "/anti-ragging" },
+    openGraph: { url: "/anti-ragging" },
 };
 
 export default function AntiRagging() {

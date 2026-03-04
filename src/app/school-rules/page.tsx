@@ -1,8 +1,10 @@
 import { ShieldCheck, Clock, BookOpen, Users, Star, AlertTriangle } from "lucide-react";
 
 export const metadata = {
-    title: "School Rules | Cambridge English School Doddaballapur",
+    title: "School Rules",
     description: "School rules and code of conduct at Cambridge English School Doddaballapur.",
+    alternates: { canonical: "/school-rules" },
+    openGraph: { url: "/school-rules" },
 };
 
 const sections = [

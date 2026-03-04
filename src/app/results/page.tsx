@@ -2,8 +2,10 @@ import { Trophy, Star, TrendingUp, Award, Medal } from "lucide-react";
 import Image from "next/image";
 
 export const metadata = {
-    title: "Results & Achievements | Cambridge English School Doddaballapur",
+    title: "Results & Achievements",
     description: "View our outstanding SSLC board exam results, district toppers, and academic achievements.",
+    alternates: { canonical: "/results" },
+    openGraph: { url: "/results" },
 };
 
 export default function Results() {

@@ -2,8 +2,10 @@ import { BookOpen, GraduationCap, Users, PenTool, LayoutTemplate, Activity, Awar
 import Image from "next/image";
 
 export const metadata = {
-    title: "Academics | Cambridge English School Doddaballapur",
+    title: "Academics",
     description: "Explore our rigorous Karnataka State Board curriculum, pre-primary to 5th STD programs, AI digital classrooms, and language subjects.",
+    alternates: { canonical: "/academics" },
+    openGraph: { url: "/academics" },
 };
 
 export default function Academics() {

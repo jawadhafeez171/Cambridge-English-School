@@ -3,8 +3,10 @@ import Link from "next/link";
 import { Quote } from "lucide-react";
 
 export const metadata = {
-    title: "Principal's Message | Cambridge English School",
+    title: "Principal's Message",
     description: "Read the inspiring message from Mrs. Seema Yasmin, Principal of Cambridge English School, Doddaballapur.",
+    alternates: { canonical: "/principal" },
+    openGraph: { url: "/principal" },
 };
 
 export default function PrincipalMessage() {
