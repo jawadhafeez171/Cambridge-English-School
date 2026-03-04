@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cambridgeenglishschool.com";
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.cambridgeschooldbp.com";
 
     // Core routes for the Cambridge English School website
     const routes = [

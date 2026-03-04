@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://cambridgeenglishschool.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.cambridgeschooldbp.com"),
   title: {
     default: "Cambridge English School | Doddaballapur",
     template: "%s | Cambridge English School",

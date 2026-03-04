@@ -28,8 +28,18 @@ export default function Header() {
     ];
 
     return (
-        <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-white"} border-b border-gray-100`}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header className={`sticky top-0 z-50 w-full transition-all duration-300 flex flex-col ${scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-white"} border-b border-gray-100`}>
+            {/* Announcement Bar */}
+            <div className="bg-primary text-white text-center py-2 px-4 shadow-sm z-50">
+                <p className="text-white text-xs sm:text-sm font-medium tracking-wide">
+                    Admissions are open for 2026-27.{" "}
+                    <Link href="/admissions" className="font-bold text-secondary-light hover:underline transition-all ml-1">
+                        Apply Now →
+                    </Link>
+                </p>
+            </div>
+
+            <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20 md:h-[88px]">
                     {/* Logo / School Name */}
                     <div className="flex-shrink-0 flex items-center min-w-0">
