@@ -1,13 +1,9 @@
 "use client";
 
-import { Mail, MapPin, Phone, Clock, Send, MessageCircle } from "lucide-react";
+import { Mail, MapPin, Phone, Clock, MessageCircle } from "lucide-react";
+import ContactForm from "@/components/forms/ContactForm";
 
 export default function Contact() {
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        alert("Thank you for your message. We will get back to you shortly.");
-    };
-
     return (
         <div className="flex flex-col min-h-screen bg-accent-bg">
             {/* Header */}
@@ -89,41 +85,7 @@ export default function Contact() {
                     <div className="lg:w-7/12 space-y-7">
                         <div className="bg-white p-8 rounded-2xl shadow-sm border border-border-light">
                             <h3 className="font-serif text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
-                            <form onSubmit={handleSubmit} className="space-y-5">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                    <div>
-                                        <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1.5">Your Name <span className="text-red-500">*</span></label>
-                                        <input type="text" id="name" required className="w-full px-4 py-3 border border-border-light rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white text-sm" placeholder="Full Name" />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-1.5">Phone Number <span className="text-red-500">*</span></label>
-                                        <input type="tel" id="phone" required className="w-full px-4 py-3 border border-border-light rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white text-sm" placeholder="+91 00000 00000" />
-                                    </div>
-                                </div>
-                                <div>
-                                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-1.5">Email Address</label>
-                                    <input type="email" id="email" className="w-full px-4 py-3 border border-border-light rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white text-sm" placeholder="you@example.com" />
-                                </div>
-                                <div>
-                                    <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-1.5">Subject <span className="text-red-500">*</span></label>
-                                    <select id="subject" required className="w-full px-4 py-3 border border-border-light rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none bg-gray-50 focus:bg-white text-gray-700 text-sm">
-                                        <option value="">Select a subject...</option>
-                                        <option value="admission">Admission Enquiry</option>
-                                        <option value="fees">Fee Structure Inquiry</option>
-                                        <option value="visit">Schedule Campus Visit</option>
-                                        <option value="career">Career / Teaching Opportunity</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-1.5">Message <span className="text-red-500">*</span></label>
-                                    <textarea id="message" required rows={4} className="w-full px-4 py-3 border border-border-light rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white resize-none text-sm" placeholder="How can we help you?" />
-                                </div>
-                                <button type="submit" className="w-full bg-primary hover:bg-primary-light text-white font-bold py-4 px-6 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 group">
-                                    Send Message
-                                    <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                                </button>
-                            </form>
+                            <ContactForm />
                         </div>
 
                     </div>

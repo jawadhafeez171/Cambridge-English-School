@@ -84,7 +84,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { Icon: CheckCircle, title: "Admissions Open", body: "Pre-Nursery to 5th STD seats available for the upcoming academic year.", color: "text-blue-600 bg-blue-50" },
+              { Icon: CheckCircle, title: "Admissions Open", body: "Pre-Nursery to 10th STD seats available for the upcoming academic year.", color: "text-blue-600 bg-blue-50" },
               { Icon: BookOpen, title: "State Board Curriculum", body: "Rigorous adherence to Karnataka State Board — core concepts, deeply mastered.", color: "text-indigo-600 bg-indigo-50" },
               { Icon: Award, title: "100% Results (10 yrs)", body: "An unbroken track record of 100% pass results in SSLC board examinations.", color: "text-amber-600 bg-amber-50" },
               { Icon: Monitor, title: "AI Digital Classrooms", body: "AI-model digital classrooms with Smart TVs and Tabs, introduced in 2025–26.", color: "text-emerald-600 bg-emerald-50" },
@@ -279,7 +279,7 @@ export default function Home() {
             Ready to Join Our School Community?
           </h2>
           <p className="text-blue-200 mb-10 text-lg">
-            Admissions are open for Pre-Nursery to 5th STD. Limited seats available.
+            Admissions are open for Pre-Nursery to 10th STD. Limited seats available.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/admissions" className="bg-secondary hover:bg-secondary-light text-white font-bold px-10 py-4 rounded-full transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2">

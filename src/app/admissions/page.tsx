@@ -1,5 +1,5 @@
 import { FileText, ClipboardList, CheckCircle, Download, HelpCircle, FileCheck, IndianRupee } from "lucide-react";
-import Link from "next/link";
+import AdmissionsForm from "@/components/forms/AdmissionsForm";
 
 export const metadata = {
     title: "Admissions & Fees",
@@ -19,7 +19,7 @@ export default function Admissions() {
                     <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Admissions</h1>
                     <div className="h-[2px] w-16 bg-secondary mx-auto mb-6" />
                     <p className="text-blue-100/80 max-w-xl mx-auto text-lg">
-                        Simple, transparent, and merit-based admission process for Pre-Nursery to 5th STD.
+                        Simple, transparent, and merit-based admission process for Pre-Nursery to 10th STD.
                     </p>
                 </div>
             </section>
@@ -86,7 +86,7 @@ export default function Admissions() {
                                         { label: "LKG", val: "4 years complete as on May 31st." },
                                         { label: "UKG", val: "5 years complete as on May 31st." },
                                         { label: "1st STD", val: "6 years complete as on May 31st." },
-                                        { label: "Other Grades up to 5th STD", val: "Transfer Certificate from previous school." },
+                                        { label: "Other Grades up to 10th STD", val: "Transfer Certificate from previous school." },
                                     ].map(({ label, val }) => (
                                         <li key={label} className="flex items-start gap-3">
                                             <CheckCircle className="text-secondary shrink-0 mt-0.5" size={15} />
@@ -132,45 +132,7 @@ export default function Admissions() {
                         {/* Enquiry Form */}
                         <div className="bg-white p-7 rounded-2xl shadow-sm border border-border-light">
                             <h3 className="font-serif text-xl font-bold text-gray-900 mb-6">Online Enquiry</h3>
-                            <form className="space-y-4">
-                                <div>
-                                    <label htmlFor="parentName" className="block text-xs font-semibold text-gray-700 mb-1">Parent&apos;s Name *</label>
-                                    <input type="text" id="parentName" required className="w-full px-4 py-2.5 border border-border-light rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm bg-gray-50 focus:bg-white" placeholder="Full Name" />
-                                </div>
-                                <div>
-                                    <label htmlFor="phoneNumber" className="block text-xs font-semibold text-gray-700 mb-1">Mobile Number *</label>
-                                    <input type="tel" id="phoneNumber" required className="w-full px-4 py-2.5 border border-border-light rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm bg-gray-50 focus:bg-white" placeholder="+91 00000 00000" />
-                                </div>
-                                <div className="grid grid-cols-2 gap-3">
-                                    <div>
-                                        <label htmlFor="studentName" className="block text-xs font-semibold text-gray-700 mb-1">Student&apos;s Name</label>
-                                        <input type="text" id="studentName" className="w-full px-4 py-2.5 border border-border-light rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm bg-gray-50 focus:bg-white" placeholder="Full Name" />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="grade" className="block text-xs font-semibold text-gray-700 mb-1">Grade Seeking *</label>
-                                        <select id="grade" required className="w-full px-4 py-2.5 border border-border-light rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none bg-gray-50 focus:bg-white text-sm">
-                                            <option value="">Select</option>
-                                            <option value="pre-nursery">Pre-Nursery</option>
-                                            <option value="nursery">Nursery</option>
-                                            <option value="lkg">LKG</option>
-                                            <option value="ukg">UKG</option>
-                                            <option value="1">1st STD</option>
-                                            <option value="2">2nd STD</option>
-                                            <option value="3">3rd STD</option>
-                                            <option value="4">4th STD</option>
-                                            <option value="5">5th STD</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div>
-                                    <label htmlFor="message" className="block text-xs font-semibold text-gray-700 mb-1">Additional Queries</label>
-                                    <textarea id="message" rows={3} className="w-full px-4 py-2.5 border border-border-light rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none text-sm bg-gray-50 focus:bg-white" placeholder="How can we help you?" />
-                                </div>
-                                <button type="button" className="w-full bg-primary hover:bg-primary-light text-white font-bold py-3 px-4 rounded-xl transition-all shadow-sm hover:shadow-md">
-                                    Submit Enquiry
-                                </button>
-                                <p className="text-xs text-gray-400 text-center">Our admissions office will contact you within 24 working hours.</p>
-                            </form>
+                            <AdmissionsForm />
                         </div>
                     </div>
                 </div>
