@@ -108,7 +108,7 @@ export default function Header() {
 
             {/* Mobile Navigation */}
             {isMenuOpen && (
-                <div className="lg:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl">
+                <div className="lg:hidden bg-white border-t border-gray-100 absolute top-full w-full left-0 shadow-xl">
                     <div className="px-4 py-4 space-y-1">
                         {navLinks.map((link) => {
                             const isActive = pathname === link.href;
