@@ -27,16 +27,16 @@ export const metadata: Metadata = {
   description: "A disciplined, result-oriented State Board school offering quality English-medium education at affordable fees in Doddaballapur, Karnataka.",
   keywords: ["Best State Board School in Doddaballapur", "English Medium School in Doddaballapur", "SSLC School in Doddaballapur", "Education in Doddaballapur"],
   openGraph: {
-    title: "Cambridge English School | Doddaballapur",
-    description: "A disciplined, result-oriented State Board school offering quality English-medium education at affordable fees in Doddaballapur, Karnataka.",
-    url: "/",
+    title: "Cambridge English School - Doddaballapur",
+    description: "A disciplined, result-oriented State Board school offering quality English-medium education in Doddaballapur, Karnataka.",
+    url: "https://www.cambridgeschooldbp.com/",
     siteName: "Cambridge English School",
     images: [
       {
-        url: "/images/School.webp",
+        url: "https://www.cambridgeschooldbp.com/preview.webp",
         width: 1200,
         height: 630,
-        alt: "Cambridge English School Campus",
+        alt: "Cambridge English School",
       },
     ],
     locale: "en_IN",
