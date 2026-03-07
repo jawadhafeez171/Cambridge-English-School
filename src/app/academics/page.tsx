@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const metadata = {
     title: "Academics",
-    description: "Explore our rigorous Karnataka State Board curriculum, pre-primary to 5th STD programs, AI digital classrooms, and language subjects.",
+    description: "Explore our rigorous Karnataka State Board curriculum, pre-primary to 10th STD programs, AI digital classrooms, and language subjects.",
     alternates: { canonical: "/academics" },
     openGraph: { url: "/academics" },
 };
@@ -20,7 +20,7 @@ export default function Academics() {
                     <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Academics</h1>
                     <div className="h-[2px] w-16 bg-secondary mx-auto mb-6" />
                     <p className="text-blue-100/80 max-w-xl mx-auto text-lg">
-                        A structured, disciplined approach to the Karnataka State Board Curriculum, building strong foundations from Pre-Nursery to 5th STD.
+                        A structured, disciplined approach to the Karnataka State Board Curriculum, building strong foundations from Pre-Nursery to 10th STD.
                     </p>
                 </div>
             </section>
@@ -53,8 +53,14 @@ export default function Academics() {
                                         body: "Building strong foundations in English, Mathematics, Environmental Science, and language subjects."
                                     },
                                     {
-                                        Icon: Globe,
+                                        Icon: BookOpen,
                                         step: "03",
+                                        title: "High School (6th to 10th STD)",
+                                        body: "Rigorous academic preparation focusing on core subjects like Mathematics, Science, and Social Sciences, leading up to the SSLC board examinations."
+                                    },
+                                    {
+                                        Icon: Globe,
+                                        step: "04",
                                         title: "Languages Offered",
                                         body: "First language Kannada, Second language English, Third language Hindi. Hindi subject is included from U.K.G."
                                     },
