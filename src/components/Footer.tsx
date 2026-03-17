@@ -82,10 +82,22 @@ export default function Footer() {
                         <ul className="space-y-5">
                             <li className="flex items-start gap-3">
                                 <MapPin size={17} className="text-secondary shrink-0 mt-0.5" />
-                                <span className="text-blue-200/80 text-sm leading-relaxed">
-                                    Cambridge English High School,<br />
-                                    Thyagarajanagar, Doddaballapur - 561203
-                                </span>
+                                <div className="space-y-4">
+                                    <div>
+                                        <p className="text-secondary-light text-[10px] font-bold uppercase tracking-wider mb-1">Main Campus</p>
+                                        <p className="text-blue-200/80 text-sm leading-relaxed">
+                                            7GVM+8VV, NH-48, Doddaballapura Main Road,<br />
+                                            Dargajogihalli, Doddaballapura, Karnataka 561203
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p className="text-secondary-light text-[10px] font-bold uppercase tracking-wider mb-1">Admin Block</p>
+                                        <p className="text-blue-200/80 text-sm leading-relaxed">
+                                            32, near telephone exchange,<br />
+                                            Thyagarajanagar, Doddaballapura, Karnataka 561203
+                                        </p>
+                                    </div>
+                                </div>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone size={17} className="text-secondary shrink-0" />

@@ -134,7 +134,7 @@ export default function SchoolRules() {
             {/* Footer note */}
             <section className="py-10 bg-primary text-center">
                 <p className="text-blue-200/80 text-sm max-w-2xl mx-auto px-4">
-                    These rules apply to all students of Cambridge English School, Thyagarajanagar, Doddaballapur — from Pre-Nursery to 10th Grade. For queries, contact the school office.
+                    These rules apply to all students of Cambridge English School, Doddaballapura — from Pre-Nursery to 10th Grade. For queries, contact the school office.
                 </p>
             </section>
 

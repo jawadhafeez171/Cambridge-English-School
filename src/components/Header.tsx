@@ -58,7 +58,7 @@ export default function Header() {
                                     Cambridge English School
                                 </span>
                                 <span className="hidden sm:block text-[9px] lg:text-[10px] text-secondary font-semibold uppercase tracking-[0.18em] mt-0.5">
-                                    Thyagarajanagar, Doddaballapur
+                                    Doddaballapura, Karnataka 561203
                                 </span>
                             </div>
                         </Link>

@@ -32,7 +32,20 @@ export default function Contact() {
                                     {
                                         Icon: MapPin,
                                         title: "Campus Address",
-                                        content: <>Cambridge English High School,<br />Thyagarajanagar, Doddaballapur - 561203</>,
+                                        content: (
+                                            <div className="space-y-3">
+                                                <div>
+                                                    <span className="text-[10px] font-bold uppercase tracking-wider text-secondary block mb-0.5">Main Campus</span>
+                                                    7GVM+8VV, NH-48, Doddaballapura Main Road,<br />
+                                                    Dargajogihalli, Doddaballapura, Karnataka 561203
+                                                </div>
+                                                <div>
+                                                    <span className="text-[10px] font-bold uppercase tracking-wider text-secondary block mb-0.5">Admin Block</span>
+                                                    32, near telephone exchange,<br />
+                                                    Thyagarajanagar, Doddaballapura, Karnataka 561203
+                                                </div>
+                                            </div>
+                                        ),
                                     },
                                     {
                                         Icon: Phone,
