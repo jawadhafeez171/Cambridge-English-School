@@ -83,20 +83,30 @@ export default function Footer() {
                             <li className="flex items-start gap-3">
                                 <MapPin size={17} className="text-secondary shrink-0 mt-0.5" />
                                 <div className="space-y-4">
-                                    <div>
+                                    <a 
+                                        href="https://maps.app.goo.gl/eTRtRKeeSv1rA2Ks9" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="block hover:bg-white/5 transition-colors p-1 -m-1 rounded"
+                                    >
                                         <p className="text-secondary-light text-[10px] font-bold uppercase tracking-wider mb-1">Main Campus</p>
                                         <p className="text-blue-200/80 text-sm leading-relaxed">
                                             7GVM+8VV, NH-48, Doddaballapura Main Road,<br />
                                             Dargajogihalli, Doddaballapura, Karnataka 561203
                                         </p>
-                                    </div>
-                                    <div>
+                                    </a>
+                                    <a 
+                                        href="https://maps.app.goo.gl/j3PRqmGQEJfy4yfw7" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="block hover:bg-white/5 transition-colors p-1 -m-1 rounded"
+                                    >
                                         <p className="text-secondary-light text-[10px] font-bold uppercase tracking-wider mb-1">Admin Block</p>
                                         <p className="text-blue-200/80 text-sm leading-relaxed">
                                             32, near telephone exchange,<br />
                                             Thyagarajanagar, Doddaballapura, Karnataka 561203
                                         </p>
-                                    </div>
+                                    </a>
                                 </div>
                             </li>
                             <li className="flex items-center gap-3">

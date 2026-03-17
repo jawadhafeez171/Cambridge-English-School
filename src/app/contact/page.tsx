@@ -34,16 +34,26 @@ export default function Contact() {
                                         title: "Campus Address",
                                         content: (
                                             <div className="space-y-3">
-                                                <div>
-                                                    <span className="text-[10px] font-bold uppercase tracking-wider text-secondary block mb-0.5">Main Campus</span>
-                                                    7GVM+8VV, NH-48, Doddaballapura Main Road,<br />
-                                                    Dargajogihalli, Doddaballapura, Karnataka 561203
-                                                </div>
-                                                <div>
-                                                    <span className="text-[10px] font-bold uppercase tracking-wider text-secondary block mb-0.5">Admin Block</span>
-                                                    32, near telephone exchange,<br />
-                                                    Thyagarajanagar, Doddaballapura, Karnataka 561203
-                                                </div>
+                                                <a 
+                                                    href="https://maps.app.goo.gl/eTRtRKeeSv1rA2Ks9" 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer"
+                                                    className="block hover:bg-gray-50 transition-colors p-2 -m-2 rounded-xl group/link"
+                                                >
+                                                    <span className="text-[10px] font-bold uppercase tracking-wider text-secondary block mb-0.5 group-hover/link:underline">Main Campus</span>
+                                                    <span className="text-gray-600">7GVM+8VV, NH-48, Doddaballapura Main Road,<br />
+                                                    Dargajogihalli, Doddaballapura, Karnataka 561203</span>
+                                                </a>
+                                                <a 
+                                                    href="https://maps.app.goo.gl/j3PRqmGQEJfy4yfw7" 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer"
+                                                    className="block hover:bg-gray-50 transition-colors p-2 -m-2 rounded-xl group/link"
+                                                >
+                                                    <span className="text-[10px] font-bold uppercase tracking-wider text-secondary block mb-0.5 group-hover/link:underline">Admin Block</span>
+                                                    <span className="text-gray-600">32, near telephone exchange,<br />
+                                                    Thyagarajanagar, Doddaballapura, Karnataka 561203</span>
+                                                </a>
                                             </div>
                                         ),
                                     },
