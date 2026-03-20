@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Award, Shield, CheckCircle, Monitor } from "lucide-react";
+import VideoCarousel from "@/components/VideoCarousel";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -265,6 +266,19 @@ export default function Home() {
               Browse Full Gallery <ArrowRight size={16} />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ─── FEATURED VIDEOS ────────────────────────────────────────── */}
+      <section className="py-24 bg-accent-bg border-t border-border-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="decorative-line text-secondary font-semibold text-xs tracking-[0.18em] uppercase inline-flex items-center">School Highlights</p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mt-3 text-shadow-sm">Featured Videos</h2>
+            <p className="text-gray-500 mt-4 max-w-xl mx-auto">Experience our school culture, annual celebrations, and the journey of our students through these selected moments.</p>
+          </div>
+          
+          <VideoCarousel />
         </div>
       </section>
 
