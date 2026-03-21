@@ -33,7 +33,7 @@ export default function VideoCarousel() {
       {/* Navigation Buttons */}
       <button
         onClick={() => scroll("left")}
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-primary p-3 rounded-full shadow-lg -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 hidden md:flex items-center justify-center border border-gray-100"
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-primary p-3 rounded-full shadow-lg -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 hidden lg:flex items-center justify-center border border-gray-100"
         aria-label="Previous video"
       >
         <ChevronLeft size={24} />
@@ -41,7 +41,7 @@ export default function VideoCarousel() {
 
       <button
         onClick={() => scroll("right")}
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-primary p-3 rounded-full shadow-lg translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 hidden md:flex items-center justify-center border border-gray-100"
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-primary p-3 rounded-full shadow-lg translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 hidden lg:flex items-center justify-center border border-gray-100"
         aria-label="Next video"
       >
         <ChevronRight size={24} />
@@ -50,13 +50,13 @@ export default function VideoCarousel() {
       {/* Scrollable Container */}
       <div
         ref={scrollRef}
-        className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8 px-4 md:px-0"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:flex gap-6 lg:overflow-x-auto lg:snap-x lg:snap-mandatory scrollbar-hide pb-8 px-4 lg:px-0"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {videos.map((video) => (
           <div
             key={video.id}
-            className="flex-shrink-0 w-[85vw] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start"
+            className="w-full lg:flex-shrink-0 lg:w-[calc(33.333%-16px)] lg:snap-start"
           >
             <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-border-light group/card">
               <div className="relative aspect-video bg-gray-100 overflow-hidden">
