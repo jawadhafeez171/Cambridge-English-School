@@ -1,14 +1,26 @@
 import { BookOpen, GraduationCap, Users, PenTool, LayoutTemplate, Activity, Award, Monitor, Globe } from "lucide-react";
 import Image from "next/image";
+import { getDictionary } from "@/lib/dictionary";
+import { Locale } from "@/i18n.config";
 
-export const metadata = {
-    title: "Academics",
-    description: "Explore our rigorous Karnataka State Board curriculum, pre-primary to 10th STD programs, AI digital classrooms, and language subjects.",
-    alternates: { canonical: "/academics" },
-    openGraph: { url: "/academics" },
-};
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+    const { lang } = await params;
+    const locale = lang as Locale;
+    const dict = await getDictionary(locale);
+    return {
+        title: dict.academicsPage.heroTitle,
+        description: dict.academicsPage.heroDescription,
+        alternates: { canonical: `/${locale}/academics` },
+        openGraph: { title: dict.academicsPage.heroTitle, url: `/${locale}/academics` },
+    };
+}
 
-export default function Academics() {
+export default async function Academics({ params }: { params: Promise<{ lang: string }> }) {
+    const { lang } = await params;
+    const locale = lang as Locale;
+    const dict = await getDictionary(locale);
+    const t = dict.academicsPage;
+
     return (
         <div className="flex flex-col min-h-screen">
             {/* Page Header */}
@@ -16,11 +28,11 @@ export default function Academics() {
                 <div className="absolute inset-0 bg-[url('/images/gallery/gallery-29.webp')] bg-cover bg-center opacity-10" />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary-light/80" />
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                    <p className="text-secondary-light font-semibold text-xs tracking-[0.2em] uppercase mb-4">Learning at Cambridge</p>
-                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Academics</h1>
+                    <p className="text-secondary-light font-semibold text-xs tracking-[0.2em] uppercase mb-4">{t.heroEyebrow}</p>
+                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">{t.heroTitle}</h1>
                     <div className="h-[2px] w-16 bg-secondary mx-auto mb-6" />
                     <p className="text-blue-100/80 max-w-xl mx-auto text-lg">
-                        A structured, disciplined approach to the Karnataka State Board Curriculum, building strong foundations from Pre-Nursery to 10th STD.
+                        {t.heroDescription}
                     </p>
                 </div>
             </section>
@@ -30,12 +42,12 @@ export default function Academics() {
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-14 items-center">
                         <div>
-                            <p className="text-secondary font-semibold text-xs tracking-[0.18em] uppercase mb-4">Our Curriculum</p>
+                            <p className="text-secondary font-semibold text-xs tracking-[0.18em] uppercase mb-4">{t.curriculumEyebrow}</p>
                             <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6 leading-snug">
-                                State Board Curriculum
+                                {t.curriculumTitle}
                             </h2>
                             <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                                We adhere strictly to the guidelines set by the Department of Public Instruction, Karnataka. Our curriculum is comprehensive, logical, and highly structured.
+                                {t.curriculumDescription}
                             </p>
 
                             <div className="space-y-6">
@@ -43,26 +55,26 @@ export default function Academics() {
                                     {
                                         Icon: LayoutTemplate,
                                         step: "01",
-                                        title: "Pre-Primary (Pre-Nursery, LKG, UKG)",
-                                        body: "Play-way method combined with structured early learning. Focus on basic numeracy, alphabet recognition, and motor skills."
+                                        title: t.step1Title,
+                                        body: t.step1Body
                                     },
                                     {
                                         Icon: Users,
                                         step: "02",
-                                        title: "Primary (1st to 5th STD)",
-                                        body: "Building strong foundations in English, Mathematics, Environmental Science, and language subjects."
+                                        title: t.step2Title,
+                                        body: t.step2Body
                                     },
                                     {
                                         Icon: BookOpen,
                                         step: "03",
-                                        title: "High School (6th to 10th STD)",
-                                        body: "Rigorous academic preparation focusing on core subjects like Mathematics, Science, and Social Sciences, leading up to the SSLC board examinations."
+                                        title: t.step3Title,
+                                        body: t.step3Body
                                     },
                                     {
                                         Icon: Globe,
                                         step: "04",
-                                        title: "Languages Offered",
-                                        body: "First language Kannada, Second language English, Third language Hindi. Hindi subject is included from U.K.G."
+                                        title: t.step4Title,
+                                        body: t.step4Body
                                     },
                                 ].map(({ Icon, step, title, body }) => (
                                     <div key={step} className="flex items-start gap-5">
@@ -85,10 +97,10 @@ export default function Academics() {
                                 <div className="text-white">
                                     <div className="flex items-center gap-2 mb-2">
                                         <Monitor size={18} className="text-secondary-light" />
-                                        <span className="text-secondary-light text-xs font-semibold uppercase tracking-wider">Digital Learning</span>
+                                        <span className="text-secondary-light text-xs font-semibold uppercase tracking-wider">{t.digiLearning}</span>
                                     </div>
-                                    <h3 className="font-serif text-2xl font-bold mb-1">AI Model Digital Classrooms</h3>
-                                    <p className="text-gray-200/80 text-sm">Equipped with Smart TVs and Tabs for an interactive learning experience.</p>
+                                    <h3 className="font-serif text-2xl font-bold mb-1">{t.digiTitle}</h3>
+                                    <p className="text-gray-200/80 text-sm">{t.digiDesc}</p>
                                 </div>
                             </div>
                         </div>
@@ -101,16 +113,16 @@ export default function Academics() {
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>
-                            <p className="text-secondary-light font-semibold text-xs tracking-[0.2em] uppercase mb-4">Our Approach</p>
-                            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">English Communication Focus</h2>
+                            <p className="text-secondary-light font-semibold text-xs tracking-[0.2em] uppercase mb-4">{t.approachEyebrow}</p>
+                            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">{t.approachTitle}</h2>
                             <p className="text-blue-200/80 mb-8 leading-relaxed text-lg">
-                                We recognize that fluent English communication is critical in today&apos;s world. Our medium of instruction is strictly upheld across all classes.
+                                {t.approachDesc}
                             </p>
                             <ul className="space-y-4">
                                 {[
-                                    "Mandatory English communication on campus",
-                                    "Dedicated grammar and phonetics classes",
-                                    "Regular public speaking and reading exercises",
+                                    t.approachListItem1,
+                                    t.approachListItem2,
+                                    t.approachListItem3,
                                 ].map((item) => (
                                     <li key={item} className="flex items-center gap-3 text-blue-100">
                                         <span className="w-2 h-2 rounded-full bg-secondary shrink-0" />
@@ -130,17 +142,17 @@ export default function Academics() {
             <section className="py-24 bg-white border-b border-border-light">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-14">
-                        <p className="text-secondary font-semibold text-xs tracking-[0.18em] uppercase mb-3">Academic Excellence</p>
-                        <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary">SSLC Preparation Strategy</h2>
+                        <p className="text-secondary font-semibold text-xs tracking-[0.18em] uppercase mb-3">{t.sslcEyebrow}</p>
+                        <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary">{t.sslcTitle}</h2>
                         <p className="text-gray-500 max-w-xl mx-auto mt-4">
-                            Our rigorous approach ensures students consistently achieve top ranks and 100% pass results.
+                            {t.sslcDesc}
                         </p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-7">
                         {[
-                            { Icon: PenTool, title: "Continuous Assessment", body: "Frequent unit tests, mid-term examinations, and monthly evaluations ensure students are constantly revising and identifying weak areas.", accent: "bg-amber-50 text-amber-600" },
-                            { Icon: GraduationCap, title: "Preparatory Exams", body: "Grade 10 students undergo a minimum of 3 full-syllabus preparatory examinations evaluated by experienced board examiners before the main exam.", accent: "bg-blue-50 text-blue-600" },
-                            { Icon: BookOpen, title: "Remedial Classes", body: "Dedicated after-school sessions for students needing extra attention in Mathematics and Science. No student is left behind.", accent: "bg-emerald-50 text-emerald-700" },
+                            { Icon: PenTool, title: t.sslcBox1Title, body: t.sslcBox1Body, accent: "bg-amber-50 text-amber-600" },
+                            { Icon: GraduationCap, title: t.sslcBox2Title, body: t.sslcBox2Body, accent: "bg-blue-50 text-blue-600" },
+                            { Icon: BookOpen, title: t.sslcBox3Title, body: t.sslcBox3Body, accent: "bg-emerald-50 text-emerald-700" },
                         ].map(({ Icon, title, body, accent }) => (
                             <div key={title} className="rounded-2xl border border-border-light p-8 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
                                 <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${accent}`}>
@@ -167,16 +179,16 @@ export default function Academics() {
                             </div>
                         </div>
                         <div className="lg:w-1/2">
-                            <p className="text-secondary font-semibold text-xs tracking-[0.18em] uppercase mb-4">Beyond Academics</p>
-                            <h2 className="font-serif text-3xl font-bold text-primary mb-6">Co-curricular Activities</h2>
+                            <p className="text-secondary font-semibold text-xs tracking-[0.18em] uppercase mb-4">{t.beyondEyebrow}</p>
+                            <h2 className="font-serif text-3xl font-bold text-primary mb-6">{t.beyondTitle}</h2>
                             <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                                While academics form our core, we believe in balanced development. Our activities are structured and disciplined.
+                                {t.beyondDesc}
                             </p>
                             <ul className="space-y-6">
                                 {[
-                                    { Icon: Activity, title: "Physical Education", body: "Scheduled PT classes, sports meets, and team games like Kho-kho, Kabaddi, and Volleyball to instil teamwork." },
-                                    { Icon: BookOpen, title: "Library Program", body: "Mandatory reading hours to cultivate a reading habit and improve general knowledge and vocabulary." },
-                                    { Icon: Award, title: "Cultural Events", body: "Celebration of national festivals and Annual Day to provide a platform for our students' talents." },
+                                    { Icon: Activity, title: t.beyondBox1Title, body: t.beyondBox1Body },
+                                    { Icon: BookOpen, title: t.beyondBox2Title, body: t.beyondBox2Body },
+                                    { Icon: Award, title: t.beyondBox3Title, body: t.beyondBox3Body },
                                 ].map(({ Icon, title, body }) => (
                                     <li key={title} className="flex items-start gap-4">
                                         <div className="w-10 h-10 bg-white border border-border-light rounded-xl flex items-center justify-center text-primary shrink-0 shadow-sm">

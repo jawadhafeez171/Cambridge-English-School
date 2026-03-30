@@ -1,0 +1,226 @@
+﻿node.exe : ΓÜá Warning: 
+Next.js inferred your 
+workspace root, but it may 
+not be correct.
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (ΓÜá  
+   Warning: Ne...not be    
+ correct.:String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+ We detected multiple 
+lockfiles and selected the 
+directory of C:\Users\build
+\package-lock.json as the 
+root directory.
+ To silence this warning, 
+set `turbopack.root` in 
+your Next.js config, or 
+consider removing one of 
+the lockfiles if it's not 
+needed.
+   See https://nextjs.org/d
+ocs/app/api-reference/confi
+g/next-config-js/turbopack#
+root-directory for more 
+information.
+ Detected additional 
+lockfiles: 
+   * C:\Users\build\Desktop
+\webapps\Cambridge 
+School\package-lock.json
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local
+
+ΓÜá The "middleware" file 
+convention is deprecated. 
+Please use "proxy" 
+instead. Learn more: https:
+//nextjs.org/docs/messages/
+middleware-to-proxy
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build 
+failed with 3 errors:
+./Desktop/webapps/Cambridge
+ School/src/app/[lang]/layo
+ut.tsx:3:1
+Module not found: Can't 
+resolve './globals.css'
+[0m [90m 1 |[39m 
+[36mimport[39m type { 
+[33mMetadata[39m } 
+[36mfrom[39m 
+[32m"next"[39m[33m;[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+[33mInter[39m[33m,[39m 
+[33mPlayfair_Display[39m 
+} [36mfrom[39m [32m"next
+/font/google"[39m[33m;[3
+9m
+[31m[1m>[22m[39m[90m 
+3 |[39m [36mimport[39m 
+[32m"./globals.css"[39m[3
+3m;[39m
+ [90m   |[39m [31m[1m^
+[22m[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[3
+1m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mimport[39m 
+[33mHeader[39m 
+[36mfrom[39m [32m"@/comp
+onents/Header"[39m[33m;[
+39m
+ [90m 6 |[39m 
+[36mimport[39m 
+[33mFooter[39m 
+[36mfrom[39m [32m"@/comp
+onents/Footer"[39m[33m;[
+39m[0m
+
+
+
+https://nextjs.org/docs/mes
+sages/module-not-found
+
+
+./Desktop/webapps/Cambridge
+ School/src/dictionaries/en
+.json
+Code generation for chunk 
+item errored
+An error occurred while 
+generating the chunk item [
+project]/Desktop/webapps/Ca
+mbridge School/src/dictiona
+ries/en.json (json)
+
+Caused by:
+- failed to convert rope 
+into string
+- invalid utf-8 sequence 
+of 1 bytes from index 6768
+
+Debug info:
+- An error occurred while 
+generating the chunk item [
+project]/Desktop/webapps/Ca
+mbridge School/src/dictiona
+ries/en.json (json)
+- Execution of 
+<JsonChunkItem as Ecmascrip
+tChunkItem>::content failed
+- failed to convert rope 
+into string
+- invalid utf-8 sequence 
+of 1 bytes from index 6768
+
+Import trace:
+  Server Component:
+    ./Desktop/webapps/Cambr
+idge School/src/dictionarie
+s/en.json
+    ./Desktop/webapps/Cambr
+idge School/src/lib/diction
+ary.ts
+    ./Desktop/webapps/Cambr
+idge School/src/app/[lang]/
+page.tsx
+
+
+./Desktop/webapps/Cambridge
+ School/src/dictionaries/kn
+.json
+Code generation for chunk 
+item errored
+An error occurred while 
+generating the chunk item [
+project]/Desktop/webapps/Ca
+mbridge School/src/dictiona
+ries/kn.json (json)
+
+Caused by:
+- Unable to make a module 
+from invalid JSON: 
+expected value at line 1 
+column 1
+
+Debug info:
+- An error occurred while 
+generating the chunk item [
+project]/Desktop/webapps/Ca
+mbridge School/src/dictiona
+ries/kn.json (json)
+- Execution of 
+<JsonChunkItem as Ecmascrip
+tChunkItem>::content failed
+- Unable to make a module 
+from invalid JSON: 
+expected value at line 1 
+column 1
+    at .
+         | v
+       1 + ∩╗┐{
+         | ^
+       2 |     
+"navigation":  {
+       3 |                 
+       "home":  
+"α▓«α│üα▓ûα▓¬α│üα▓ƒ",
+       4 |                 
+       "about":  
+"α▓¿α▓«α│ìα▓« 
+α▓¼α▓ùα│ìα▓ùα│å",
+       5 |                 
+       "academics":  
+"α▓╢α│êα▓òα│ìα▓╖α▓úα▓┐α▓ò",
+
+Import trace:
+  Server Component:
+    ./Desktop/webapps/Cambr
+idge School/src/dictionarie
+s/kn.json
+    ./Desktop/webapps/Cambr
+idge School/src/lib/diction
+ary.ts
+    ./Desktop/webapps/Cambr
+idge School/src/app/[lang]/
+page.tsx
+
+
+    at <unknown> (./Desktop
+/webapps/Cambridge School/s
+rc/app/[lang]/layout.tsx:3:
+1)
+    at <unknown> (https://n
+extjs.org/docs/messages/mod
+ule-not-found)

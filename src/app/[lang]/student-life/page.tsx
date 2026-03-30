@@ -1,22 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Heart, Music, Trophy, Palette, BookOpen, Users } from "lucide-react";
+import { getDictionary } from "@/lib/dictionary";
+import { Locale } from "@/i18n.config";
 
-export const metadata = {
-    title: "Student Life",
-    description: "Explore the vibrant student life at Cambridge English School — sports, arts, events, and a nurturing campus community.",
-    alternates: { canonical: "/student-life" },
-    openGraph: { url: "/student-life" },
-};
-
-const activities = [
-    { icon: Trophy, title: "Sports & Athletics", desc: "Annual sports meets, Kabaddi, Kho-kho, Volleyball, and daily physical training that builds teamwork and discipline.", color: "text-orange-600 bg-orange-50" },
-    { icon: Music, title: "Cultural Events", desc: "School celebrations, Republic Day, Independence Day, and Prathiba Karanji — students shine on stage every year.", color: "text-purple-600 bg-purple-50" },
-    { icon: Palette, title: "Arts & Creativity", desc: "Drawing, craft, and art competitions that encourage self-expression and creative thinking from a young age.", color: "text-pink-600 bg-pink-50" },
-    { icon: BookOpen, title: "Academic Clubs", desc: "Science exhibitions, quiz competitions, and debate sessions that push students beyond the classroom.", color: "text-blue-600 bg-blue-50" },
-    { icon: Heart, title: "Values & Character", desc: "Morning assemblies, moral education, and community service activities that build integrity and empathy.", color: "text-red-600 bg-red-50" },
-    { icon: Users, title: "Peer Learning", desc: "Group projects, study circles, and collaborative learning that develop communication and leadership skills.", color: "text-emerald-600 bg-emerald-50" },
-];
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+    const { lang } = await params;
+    const locale = lang as Locale;
+    const dict = await getDictionary(locale);
+    return {
+        title: dict.studentLifePage.heroTitle,
+        description: dict.studentLifePage.heroDesc,
+        alternates: { canonical: `/${locale}/student-life` },
+        openGraph: { title: dict.studentLifePage.heroTitle, url: `/${locale}/student-life` },
+    };
+}
 
 // A curated selection of lively student photos from the gallery
 const collagePhotos = [
@@ -30,20 +28,33 @@ const collagePhotos = [
     { src: "/images/gallery/gallery-98.webp", span: "col-span-1 row-span-1" },
 ];
 
-export default function StudentLife() {
+export default async function StudentLife({ params }: { params: Promise<{ lang: string }> }) {
+    const { lang } = await params;
+    const locale = lang as Locale;
+    const dict = await getDictionary(locale);
+    const t = dict.studentLifePage;
+
+    const activities = [
+        { icon: Trophy, title: t.act1Title, desc: t.act1Body, color: "text-orange-600 bg-orange-50" },
+        { icon: Music, title: t.act2Title, desc: t.act2Body, color: "text-purple-600 bg-purple-50" },
+        { icon: Palette, title: t.act3Title, desc: t.act3Body, color: "text-pink-600 bg-pink-50" },
+        { icon: BookOpen, title: t.act4Title, desc: t.act4Body, color: "text-blue-600 bg-blue-50" },
+        { icon: Heart, title: t.act5Title, desc: t.act5Body, color: "text-red-600 bg-red-50" },
+        { icon: Users, title: t.act6Title, desc: t.act6Body, color: "text-emerald-600 bg-emerald-50" },
+    ];
+
     return (
         <div className="flex flex-col min-h-screen">
-
             {/* Page Header */}
             <section className="relative bg-primary text-white py-20 md:py-28 overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/gallery/gallery-32.webp')] bg-cover bg-center opacity-15" />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-primary-light/80" />
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                    <p className="text-secondary-light font-semibold text-xs tracking-[0.2em] uppercase mb-4">Beyond the Classroom</p>
-                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Student Life</h1>
+                    <p className="text-secondary-light font-semibold text-xs tracking-[0.2em] uppercase mb-4">{t.heroEyebrow}</p>
+                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">{t.heroTitle}</h1>
                     <div className="h-[2px] w-16 bg-secondary mx-auto mb-6" />
                     <p className="text-blue-100/80 max-w-xl mx-auto text-lg">
-                        A vibrant campus where students grow academically, creatively, and as responsible citizens.
+                        {t.heroDesc}
                     </p>
                 </div>
             </section>
@@ -52,8 +63,8 @@ export default function StudentLife() {
             <section className="py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-10">
-                        <p className="text-secondary font-semibold text-xs tracking-[0.18em] uppercase mb-2">Campus Moments</p>
-                        <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary">Life at Cambridge</h2>
+                        <p className="text-secondary font-semibold text-xs tracking-[0.18em] uppercase mb-2">{t.momentsEyebrow}</p>
+                        <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary">{t.momentsTitle}</h2>
                     </div>
 
                     {/* Mobile: 2-col grid */}
@@ -76,8 +87,8 @@ export default function StudentLife() {
                     </div>
 
                     <div className="text-center mt-8">
-                        <Link href="/gallery" className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-7 py-3 rounded-full hover:bg-primary-light transition-colors text-sm">
-                            View Full Gallery →
+                        <Link href={`/${locale}/gallery`} className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-7 py-3 rounded-full hover:bg-primary-light transition-colors text-sm">
+                            {t.viewGalleryBtn}
                         </Link>
                     </div>
                 </div>
@@ -87,8 +98,8 @@ export default function StudentLife() {
             <section className="py-16 bg-accent-bg">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <p className="text-secondary font-semibold text-xs tracking-[0.18em] uppercase mb-2">What We Offer</p>
-                        <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary">Activities & Programmes</h2>
+                        <p className="text-secondary font-semibold text-xs tracking-[0.18em] uppercase mb-2">{t.offerEyebrow}</p>
+                        <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary">{t.offerTitle}</h2>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {activities.map(({ icon: Icon, title, desc, color }) => (
@@ -117,13 +128,12 @@ export default function StudentLife() {
 
             {/* CTA */}
             <section className="py-16 bg-primary text-white text-center">
-                <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4">Be Part of Our Community</h2>
-                <p className="text-blue-200 mb-8 max-w-lg mx-auto">Join hundreds of students experiencing a holistic, values-driven education at Cambridge English School.</p>
-                <Link href="/admissions" className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-light text-white font-bold px-9 py-4 rounded-full transition-all shadow-lg">
-                    Apply for Admission →
+                <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4">{t.ctaTitle}</h2>
+                <p className="text-blue-200 mb-8 max-w-lg mx-auto">{t.ctaDesc}</p>
+                <Link href={`/${locale}/admissions`} className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-light text-white font-bold px-9 py-4 rounded-full transition-all shadow-lg">
+                    {t.applyBtn}
                 </Link>
             </section>
-
         </div>
     );
 }

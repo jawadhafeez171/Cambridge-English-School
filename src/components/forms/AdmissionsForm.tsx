@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { submitToGoogleSheets } from "@/app/actions/submitForm";
+import { submitToGoogleSheets } from "@/actions/submitForm";
 
 export default function AdmissionsForm() {
     const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");

@@ -2,19 +2,22 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, MapPin, Phone, Facebook, Instagram, Youtube } from "lucide-react";
 
-export default function Footer() {
+export default function Footer({ lang, dict, nav }: { lang: string, dict: any, nav?: any }) {
+    const n = nav || {};
     const navLinks = [
-        { name: "About Us", href: "/about" },
-        { name: "Academics", href: "/academics" },
-        { name: "Student Life", href: "/student-life" },
-        { name: "Principal's Message", href: "/principal" },
-        { name: "Admissions", href: "/admissions" },
-        { name: "Results & Achievements", href: "/results" },
-        { name: "Photo Gallery", href: "/gallery" },
-        { name: "School Rules", href: "/school-rules" },
-        { name: "Anti-Ragging Policy", href: "/anti-ragging" },
-        { name: "Contact", href: "/contact" },
+        { name: n.about || "About Us", href: `/${lang}/about` },
+        { name: n.academics || "Academics", href: `/${lang}/academics` },
+        { name: n.studentLife || "Student Life", href: `/${lang}/student-life` },
+        { name: n.principal || "Principal's Message", href: `/${lang}/principal` },
+        { name: n.admissions || "Admissions", href: `/${lang}/admissions` },
+        { name: n.results || "Results & Achievements", href: `/${lang}/results` },
+        { name: n.gallery || "Photo Gallery", href: `/${lang}/gallery` },
+        { name: n.schoolRules || "School Rules", href: `/${lang}/school-rules` },
+        { name: n.antiRagging || "Anti-Ragging Policy", href: `/${lang}/anti-ragging` },
+        { name: n.facilities || "Infrastructure", href: `/${lang}/facilities` },
+        { name: n.contact || "Contact", href: `/${lang}/contact` },
     ];
+
 
     return (
         <footer className="bg-[#0a1847] text-white">
@@ -43,7 +46,7 @@ export default function Footer() {
                         </div>
 
                         <p className="text-blue-200/80 text-sm leading-relaxed mb-6">
-                            A disciplined, result-oriented State Board school offering quality English-medium education at affordable fees. Shaping bright futures since 2005.
+                            {dict.aboutText || "A disciplined, result-oriented State Board school offering quality English-medium education at affordable fees. Shaping bright futures since 2005."}
                         </p>
 
                         <div className="flex space-x-3">
@@ -62,7 +65,7 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-secondary-light mb-5">Quick Links</h3>
+                        <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-secondary-light mb-5">{dict.quickLinks || "Quick Links"}</h3>
                         <ul className="space-y-2.5">
                             {navLinks.map((link) => (
                                 <li key={link.name}>
@@ -78,7 +81,7 @@ export default function Footer() {
 
                     {/* Contact Details */}
                     <div>
-                        <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-secondary-light mb-5">Contact Us</h3>
+                        <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-secondary-light mb-5">{dict.contactInfo || "Contact Us"}</h3>
                         <ul className="space-y-5">
                             <li className="flex items-start gap-3">
                                 <MapPin size={17} className="text-secondary shrink-0 mt-0.5" />
@@ -127,8 +130,8 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="border-t border-white/10 mt-12 pt-7 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-blue-300/60">
-                    <p>&copy; {new Date().getFullYear()} Cambridge English School. All rights reserved.</p>
-                    <p>Affiliated to Karnataka State Board &bull; Designed by <a href="https://hafeezstudio.com" target="_blank" rel="noopener noreferrer" className="text-blue-200/90 font-semibold hover:text-white transition-colors">HafeezStudio</a></p>
+                    <p>{dict.copyright?.replace("{year}", new Date().getFullYear().toString()) || `© ${new Date().getFullYear()} Cambridge English School. All rights reserved.`}</p>
+                    <p>Affiliated to Karnataka State Board &bull; {(dict.designBy || "Designed by").replace("Antigravity", "")} <a href="https://hafeezstudio.com" target="_blank" rel="noopener noreferrer" className="text-blue-200/90 font-semibold hover:text-white transition-colors">HafeezStudio</a></p>
                 </div>
             </div>
         </footer>

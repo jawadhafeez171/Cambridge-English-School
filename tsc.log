@@ -1,0 +1,27 @@
+﻿.next/dev/types/validator.ts(42,39): error TS2307: Cannot find module '../../../src/app/about/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(51,39): error TS2307: Cannot find module '../../../src/app/academics/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(60,39): error TS2307: Cannot find module '../../../src/app/admissions/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(69,39): error TS2307: Cannot find module '../../../src/app/anti-ragging/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(78,39): error TS2307: Cannot find module '../../../src/app/blog/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(87,39): error TS2307: Cannot find module '../../../src/app/contact/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(96,39): error TS2307: Cannot find module '../../../src/app/facilities/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(105,39): error TS2307: Cannot find module '../../../src/app/gallery/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(114,39): error TS2307: Cannot find module '../../../src/app/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(123,39): error TS2307: Cannot find module '../../../src/app/principal/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(132,39): error TS2307: Cannot find module '../../../src/app/results/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(141,39): error TS2307: Cannot find module '../../../src/app/school-rules/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(150,39): error TS2307: Cannot find module '../../../src/app/student-life/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(165,39): error TS2307: Cannot find module '../../../src/app/layout.js' or its corresponding type declarations.
+.next/types/validator.ts(24,44): error TS2344: Type 'Route' does not satisfy the constraint '"/"'.
+  Type '"/[lang]"' is not assignable to type '"/"'.
+.next/types/validator.ts(24,75): error TS2344: Type 'Route' does not satisfy the constraint '"/"'.
+  Type '"/[lang]"' is not assignable to type '"/"'.
+.next/types/validator.ts(166,31): error TS2344: Type 'typeof import("C:/Users/build/Desktop/webapps/Cambridge School/src/app/[lang]/layout")' does not satisfy the constraint 'LayoutConfig<"/[lang]">'.
+  Types of property 'default' are incompatible.
+    Type '({ children, params, }: { children: ReactNode; params: Promise<{ lang: string; }>; }) => Promise<Element>' is not assignable to type 'ComponentType<LayoutProps<"/[lang]">> | ((props: LayoutProps<"/[lang]">) => void | ReactNode | Promise<ReactNode> | Promise<...>)'.
+      Type '({ children, params, }: { children: ReactNode; params: Promise<{ lang: string; }>; }) => Promise<Element>' is not assignable to type 'FunctionComponent<LayoutProps<"/[lang]">>'.
+        Types of parameters '__0' and 'props' are incompatible.
+          Type 'LayoutProps<"/[lang]">' is not assignable to type '{ children: ReactNode; params: Promise<{ lang: string; }>; }'.
+            Types of property 'params' are incompatible.
+              Type 'Promise<unknown>' is not assignable to type 'Promise<{ lang: string; }>'.
+                Type 'unknown' is not assignable to type '{ lang: string; }'.

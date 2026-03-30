@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import BottomNavigation from "@/components/BottomNavigation";
+import { getDictionary } from "@/lib/dictionary";
+import { Locale } from "@/i18n.config";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -53,21 +55,26 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const locale = lang as Locale;
+  const dict = await getDictionary(locale);
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={`${inter.variable} ${playfair.variable} font-sans flex flex-col min-h-screen pb-16 md:pb-0`}>
-        <Header />
+        <Header lang={locale} dict={dict} />
         <main className="flex-grow">
           {children}
         </main>
-        <Footer />
-        <BottomNavigation />
-        <FloatingWhatsApp />
+        <Footer lang={locale} dict={dict.footer} nav={dict.navigation} />
+        <BottomNavigation lang={locale} dict={dict.navigation} />
+        <FloatingWhatsApp dict={dict.whatsapp} />
       </body>
     </html>
   );

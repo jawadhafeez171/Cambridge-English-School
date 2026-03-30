@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Send } from "lucide-react";
-import { submitToGoogleSheets } from "@/app/actions/submitForm";
+import { submitToGoogleSheets } from "@/actions/submitForm";
 
 export default function ContactForm() {
     const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");

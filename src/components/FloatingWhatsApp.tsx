@@ -1,9 +1,9 @@
 import { MessageCircle } from "lucide-react";
 
-export default function FloatingWhatsApp() {
+export default function FloatingWhatsApp({ dict }: { dict?: any }) {
     // Replace with the school's actual WhatsApp number
     const phoneNumber = "919845332367";
-    const message = encodeURIComponent("Hello! I want to inquire about admission to Cambridge English School.");
+    const message = encodeURIComponent(dict?.message || "Hello! I want to inquire about admission to Cambridge English School.");
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
     return (
@@ -27,7 +27,7 @@ export default function FloatingWhatsApp() {
 
             {/* Tooltip */}
             <span className="absolute right-16 bg-white text-gray-800 text-sm font-medium py-1 px-3 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none after:content-[''] after:absolute after:top-1/2 after:-translate-y-1/2 after:-right-2 after:border-8 after:border-transparent after:border-l-white">
-                Chat with us!
+                {dict?.tooltip || "Chat with us!"}
             </span>
         </a>
     );

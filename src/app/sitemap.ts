@@ -20,10 +20,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/student-life',
     ];
 
-    return routes.map((route) => ({
-        url: `${baseUrl}${route}`,
-        lastModified: new Date(),
-        changeFrequency: route === '' ? 'weekly' : 'monthly',
-        priority: route === '' ? 1 : 0.8,
-    }));
+    const locales = ['/en', '/kn'];
+
+    const sitemapEntries: MetadataRoute.Sitemap = [];
+
+    routes.forEach((route) => {
+        locales.forEach((locale) => {
+            sitemapEntries.push({
+                url: `${baseUrl}${locale}${route}`,
+                lastModified: new Date(),
+                changeFrequency: route === '' ? 'weekly' : 'monthly',
+                priority: route === '' ? 1 : 0.8,
+            });
+        });
+    });
+
+    return sitemapEntries;
 }

@@ -4,15 +4,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Info, BookOpen, ClipboardList, Phone } from "lucide-react";
 
-export default function BottomNavigation() {
+export default function BottomNavigation({ lang, dict }: { lang?: string, dict?: any }) {
     const pathname = usePathname();
+    const currentLang = lang || pathname?.split("/")[1] || "en";
+    const t = dict || { nav: { home: "Home", about: "About", academics: "Academics", apply: "Apply", call: "Call" } };
 
     const navItems = [
-        { name: "Home", href: "/", icon: Home },
-        { name: "About", href: "/about", icon: Info },
-        { name: "Academics", href: "/academics", icon: BookOpen },
-        { name: "Apply", href: "/admissions", icon: ClipboardList },
-        { name: "Call", href: "tel:+919845332367", icon: Phone }, // Using the updated phone number
+        { name: t.nav?.home || t.home || "Home", href: `/${currentLang}`, icon: Home },
+        { name: t.nav?.about || t.about || "About", href: `/${currentLang}/about`, icon: Info },
+        { name: t.nav?.academics || t.academics || "Academics", href: `/${currentLang}/academics`, icon: BookOpen },
+        { name: t.nav?.apply || t.apply || "Apply", href: `/${currentLang}/admissions`, icon: ClipboardList },
+        { name: t.nav?.call || t.call || "Call", href: "tel:+919845332367", icon: Phone },
     ];
 
     return (
